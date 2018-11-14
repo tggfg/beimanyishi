@@ -5,7 +5,7 @@ import classify  from "../components/classify/classify.vue"
 import clothes  from "../components/clothes/clothes.vue"
 import personal  from "../components/personal/personal.vue"
 import shopping  from "../components/shopping/shopping.vue"
-
+import collection from "../components/personal/second/collection.vue"
 Vue.use(Router)
 
 export default new Router({
@@ -38,6 +38,11 @@ export default new Router({
 	 path:"/shopping",
 	 name:"shopping",
 	 component:shopping
-	 }
+	 },
+	 {
+	path:"/second/collection",
+	name:"collection",
+	component:collection
+	},
   ]
 })
