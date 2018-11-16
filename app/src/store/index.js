@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import classify from "./classify";
+import home from "./home";
 Vue.use(Vuex);
 const state = {
  
@@ -22,8 +24,9 @@ const store =  new Vuex.Store({
     getters,
     mutations,
     actions,
-	mudules:{
-		
+	modules:{
+        classify,
+        home
 	}
 })
 

@@ -7,7 +7,6 @@ import store from "./store"
 import "./reset.css";
 import "./rem.js";
 import "../static/css/iconfont/iconfont.css";
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
