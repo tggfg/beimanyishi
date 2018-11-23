@@ -27,25 +27,19 @@ export default {
         this.id2=this.$route.query.typeId_2;
         this.id3=this.$route.query.typeId_3;
         // console.log(this.$route.query.typeId_1);
-        this.handlePic({id1:this.id1,id2:this.id2,id3:this.id3})     
+        this.handleRoute({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:1})     
     },
     computed:{
         ...Vuex.mapState({
             pic:state=>state.classify.pic
         })
     },
-     beforeRouteUpdate(to,from,next){
-         this.id1=to.query.typeId_1;
-         this.id2=to.query.typeId_2;
-         this.id3=to.query.typeId_3;
-         this.handlePic({id1:this.id1,id2:this.id2,id3:this.id3})
-        next();
-    },
    data(){
        return{
            id1:0,
            id2:0,
-           id3:0
+           id3:0,
+           pageNum:1
        }
    },
     mounted(){
@@ -55,15 +49,28 @@ export default {
         });
         this.scroll.on("pullingUp",()=>{
             // alert(1)
+        this.handlePic({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:++this.pageNum})
         })
+    },
+     beforeRouteUpdate(to,from,next){
+         this.id1=to.query.typeId_1;
+         this.id2=to.query.typeId_2;
+         this.id3=to.query.typeId_3;
+         this.handleRoute({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:1})
+        next();
     },
     methods:{
         handleCloth(){
             alert(1);
         },
         ...Vuex.mapActions({
-            handlePic:"classify/handlePic"
+            handlePic:"classify/handlePic",
+            handleRoute:"classify/handleRoute"
         })
+    },
+    updated(){
+        this.scroll.refresh();
+        this.scroll.finishPullUp();
     }
 }
 </script>
@@ -71,11 +78,13 @@ export default {
 <style scoped>
 .wrapper{ 
     position: absolute;
-    z-index: 1;
-    top:1.6rem;
+    z-index: 1000;
+    top:2rem;
     bottom: .98rem;
     width:100%;
+    height:100%;
     overflow: hidden;
+    background: #fff;
 }
 .cloth{ 
     overflow: hidden;
@@ -84,7 +93,7 @@ export default {
     width: 3.4rem;
     height: 5.2rem;
     float: left;
-    margin:0 0 10px 12px;
+    margin:0 0 20px 12px;
 }
 .cloth>.pic>p{
     font-size: 12px;

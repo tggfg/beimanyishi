@@ -27,10 +27,10 @@ export default {
         this.curIndex=this.$route.query.index; //三级菜单下标 
         axios({
 			methods:"get",
-			url:"http://localhost:3000/list"
+			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
         }).then((data)=>{
             this.navs=[]
-            data.data.map((item)=>{
+            data.data.data.map((item)=>{
                 if(item.id==this.level2){
                      this.name=item.name;            
                 }
@@ -74,7 +74,7 @@ export default {
 </script>
 <style>
 .list{
-width: 100%;
+ width: 100%;
  background: #fff;
  z-index: 1000;
 }
@@ -91,16 +91,19 @@ width: 100%;
     font-size:16px;
     font-weight: 900;
     margin-left: 10px;
+    font-family: PingFangSC-Medium;
 }
 .list>.nav{
-    padding-top: 50px;
+    padding-top: 1.2rem;
     padding-left: 10px;
-    min-width: 610px;
-    /* display: flex; */
+    min-width: 700px;
+    display: flex; 
+    /* justify-content: space-around;  */
     overflow-x: auto;
     border-bottom: 1px solid #f1f1f1
 }
 .list>.nav>li{
+    font-family: PingFangSC-Medium;
     float: left;
     font-size: 14px;
     margin-right: 15px;

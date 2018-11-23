@@ -29,31 +29,37 @@ import Vuex from "vuex";
 export default {
     created(){
         this.parentId=this.$route.query.val;
+        this.index1=this.$route.query.index;
         axios({
 			methods:"get",
-			url:"http://localhost:3000/list"
+			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
 		}).then((data)=>{
-            this.data=data.data;
+            this.data=data.data.data;
              this.data.map((item)=>{
                 if(item.parentId==this.parentId&&item.level==2){
                 this.navs.push(item);
                 }
+                     
                 //第三级菜单的初始化
-                  if(item.parentId==6&&item.level==3){
+                  if(item.parentId==2001&&item.level==3){
                         this.small.push(item);
-                    }                
+                    }          
             }) 
-        })        
+            //初始化二级大图
+            this.bigsrc=this.navs[0].picture;
+        }) 
+      
     },
     data(){
         return{
             curIndex:0,
-            bigsrc:"static/listimg/topw.png",//二级菜单的大图
+            bigsrc:"",//二级菜单的大图
             navs:[],
             small:[],
-            parentId:1,
+            parentId:1001,
+            index1:0,
             data:[],
-            parentId2:6
+            parentId2:2001
         }
     },
     methods:{
@@ -70,13 +76,14 @@ export default {
         },
     handleQuan(id){
             //全部商品的路由跳转，将一级菜单的id传过去
-        this.$router.push({name:"total",query:{idOne:id}});
+        this.$router.push({name:"total",query:{idOne:id,index:this.index1}});
         },
     handleBao(){
         console.log("商品爆款");
 
     },
     handlePic(id1,id2,id3,index){
+        console.log(id1,id2,id3)
         //路由跳转到三级菜单的具体页面
         this.$router.push({name:"listdetail",
         query:{level1:id1,level2:id2,level3:id3,index}})
@@ -84,10 +91,14 @@ export default {
     },
    beforeRouteUpdate(to,from,next){
       this.parentId=to.query.val;
+      this.index1=to.query.index;
       //三级菜单初始化，需后期修改
       switch(this.parentId){
-          case 1: this.parentId2=6;break;
-          case 2:this.parentId2=7;break
+            case 1001: this.parentId2=2001;break;
+            case 1002:this.parentId2=2002;break;
+            case 1003:this.parentId2=2003;break;
+            case 1004:this.parentId2=2004;break;
+            case 1005:this.parentId2=2005;break;
       }    
       this.curIndex=0;
       this.navs=[];
@@ -98,13 +109,25 @@ export default {
         }
         //路由更新后根据第一级菜单和第二级菜单进行初始化第三级菜单
          switch(this.parentId){
-            case 1: if(item.parentId==6){
+            case 1001: if(item.parentId==2001){
                         this.small.push(item);
-                        this.bigsrc="static/listimg/topw.png"
+                        this.bigsrc=this.navs[0].picture;
                     };break;
-            case 2: if(item.parentId==7){
+            case 1002: if(item.parentId==2002){
                         this.small.push(item);
-                        this.bigsrc="static/listimg/manshirt.png";
+                        this.bigsrc=this.navs[0].picture;
+                    };break;  
+            case 1003: if(item.parentId==2003){
+                        this.small.push(item);
+                        this.bigsrc=this.navs[0].picture;
+                    };break;
+            case 1004: if(item.parentId==2004){
+                        this.small.push(item);
+                        this.bigsrc=this.navs[0].picture;
+                    };break; 
+            case 1005: if(item.parentId==2005){
+                        this.small.push(item);
+                        this.bigsrc=this.navs[0].picture;
                     };break;    
             }
         })
@@ -115,37 +138,45 @@ export default {
 </script>
 <style>
 .women{
-    margin-top: .35rem;
     display: flex;
+    height: 100%;
 }
 .women>.womem_left{
-    /* float: left; */
-    width:6rem;
+    padding-top: .35rem;
+    width:8rem;
+    height:100%;
+    border-right: 1px solid #e5e5e5;
 }
 .women>.womem_left>p:nth-child(2){
   margin-bottom: .4rem;
+  border-bottom: 1px solid #e5e5e5;
 }
 .women>.womem_left>ul>li,.women>.womem_left>p{
     font-size: 14px;
     color: #5a5a5a;
     height: .65rem;
     line-height: .65rem;
-    padding: 0 .19rem;
+    padding: 0 .12rem;
+    /* margin: 0 15px; */
+    font-family: PingFangSC-Medium;
 }
 .women>.womem_left>ul>.active{
     border-left:2px solid #000;
     color: #1c1c1c;
 }
 .women_right{
-    margin-right: .4rem;
-    margin-left: 10px;
+    padding-top: .35rem;
+    margin-right: .5rem;
+    margin-left: 15px;
 }
 .women_right>.bigImg{
     width: 5.0rem;
+    height:2rem;
 
 }
 .women_right>.bigImg>img{
     width: 100%;
+    height:100%;
 }
 .women_right>.xia{
     margin-top: .3rem;
@@ -164,6 +195,7 @@ export default {
 }
 .women_right>.xia>.small>img{
   width: 100%;
+  height:100%;
  
 }
 .women_right>.xia>.small{
@@ -172,7 +204,8 @@ export default {
 .women_right>.xia>.small>span{
     font-size: 10px;
     margin-top: 10px ;
-    text-align: center
+    text-align: center;
+    font-family: PingFangSC-Regular;
 }
 </style>
 

@@ -9,6 +9,7 @@ import listdetail from "../components/classify/listdetail.vue";
 import listcloth from "../components/classify/listcloth.vue";
 import nav from "../components/classify/nav";
 import total from "../components/classify/total";
+import totalcloth from "../components/classify/totalcloth";
 // syx
 import discount from "../components/home/discount.vue"
 import index from "../components/home/index.vue"
@@ -17,7 +18,8 @@ import tehui from "../components/home/tehui/tehui.vue"
 import tehui1 from "../components/home/tehui/tehui1.vue"
 import tehui2 from "../components/home/tehui/tehui2.vue"
 import tehui3 from "../components/home/tehui/tehui3.vue"
-import search from "../components/home/search.vue"
+import search from "../components/home/search.vue";
+import message from "../components/home/message.vue";
 Vue.use(Router)
 
 export default new Router({
@@ -71,6 +73,11 @@ export default new Router({
 		 },
 			  ]
 	  },
+	  {
+		  path:"/message",
+		  name:"message",
+		  component:message
+	  },
 	 {
 	 path:"/classify",
 	 name:"classify",
@@ -98,7 +105,14 @@ export default new Router({
 	 {
 		path:"/total",
 		name:"total",
-		component:total
+		component:total,
+		children:[
+			{
+				path:"totalcloth",
+				name:"totalcloth",
+				component:totalcloth
+			}
+		]
 	 },
 	 {
 	 path:"/clothes",
