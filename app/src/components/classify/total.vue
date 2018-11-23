@@ -12,84 +12,42 @@
 			{{item.name}}
 			</li>
 		</ul>
-       <div class="wrapper" ref="wrapper">
-        <div class="cloth  content" >
-            <div v-for="(item,index) in pic" class="pic" @click="handleCloth()">
-           <a href="##">
-               <img :src="item.picture" alt="">
-           </a>
-           <p>{{item.name}}</p>
-           <p>{{item.price | price("￥")}}</p>
-        </div>
-    </div>
-    </div>
+        <router-view></router-view>
     </div>
 </template>
-
 <script>
 import Vuex from "vuex";
 import  axios from "axios";
-import BScroll from "better-scroll";
 export default {
 created(){
-    this.idOne=this.$route.query.idOne;//一级菜单的id
-    this.curIndex=this.idOne-1;//一级菜单的下标
+    this.id1=this.$route.query.idOne;//一级菜单的id
+    this.curIndex=this.$route.query.index;//一级菜单的下标
     axios({
 			methods:"get",
-			url:"http://localhost:3000/list"
+			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
 		}).then((data)=>{
-             data.data.map((item)=>{
+             data.data.data.map((item)=>{
                 if(item.level==1){
                 this.navs.push(item);
                 }
              })
         })
-        // 初始化全部商品
-        switch(this.idOne){
-            case 1:this.handlePic({id1:1});break;
-            case 2:this.handlePic({id1:2});break;
-            case 3:this.handlePic({id1:3});break;
-            case 4:this.handlePic({id1:4});break;
-            case 5:this.handlePic({id1:5});break;
-        }       
+        this.$router.push({name:"totalcloth",query:{id:this.id1}})      
 },
-filters:{
-        "price":(val,params)=>{
-            return params+val;
-        }
-    },
 data(){
    return{
        navs:[],
-       curIndex:0
+       curIndex:0,
+       id1:1001
    }
 },
- computed:{
-        ...Vuex.mapState({
-            pic:state=>state.classify.pic
-        })
-    },
-    mounted(){
-       this.scroll =  new BScroll(this.$refs.wrapper,{
-            click:true,
-            pullUpLoad:true
-        });
-        this.scroll.on("pullingUp",()=>{
-            alert(1)
-        })
-    },
 methods:{
     handleId(index,id){
-        this.curIndex=index;
-        this.handlePic({id1:id})
-    },
-     handleCloth(){
-            alert(1);
-    },
-    ...Vuex.mapActions({
-        handlePic:"classify/handlePic"
-    })
+        this.curIndex = index;
+        this.$router.push({name:"totalcloth",query:{id:id}})
+    }
 }
+
 }
 </script>
 
@@ -97,7 +55,10 @@ methods:{
 .total{
     width:100%;
     height:100%;
-    margin-top:.4rem;
+    position:fixed;
+    z-index: 1000;
+    background: #fff;
+    top:.4rem;
 }
 .total>.toper{
     padding-left: 10px;
@@ -111,11 +72,11 @@ methods:{
     font-size:16px;
     font-weight: 900;
     margin-left: 10px;
+    font-family: PingFangSC-Regular;
 }
 .total>.nav{
     width:100%;
     height: .74rem;
-	/* background: yellowgreen; */
 	display: flex;
 	justify-content: space-around;
 	line-height: .74rem;
@@ -128,39 +89,10 @@ methods:{
     text-align: center;
     font-size:16px;
     color: #5a5a5a;
+    font-family: PingFangSC-Regular;
 }
 .total>.nav>.active{
     border-bottom: 1px solid #000;
 	color: #1c1c1c;
-}
-.total>.wrapper{ 
-    position: absolute;
-    z-index: 1;
-    top:1.6rem;
-    bottom: .98rem;
-    width:100%;
-    overflow: hidden;
-    margin-top: 10px
-}
-.total>.wrapper>.cloth{ 
-    overflow: hidden;
-}
-.total>.wrapper>.cloth>.pic{
-    width: 3.4rem;
-    height: 5.2rem;
-    float: left;
-    margin:0 0 10px 12px;
-}
-.total>.wrapper>.cloth>.pic>p{
-    font-size: 12px;
-    color: #5a5a5a;
-    margin-top: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-.total>.wrapper>.cloth>.pic>a>img{
-    width: 100%;
-    height: 75%;
 }
 </style>
