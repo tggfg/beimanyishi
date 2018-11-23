@@ -18,6 +18,7 @@ import tehui1 from "../components/home/tehui/tehui1.vue"
 import tehui2 from "../components/home/tehui/tehui2.vue"
 import tehui3 from "../components/home/tehui/tehui3.vue"
 import search from "../components/home/search.vue"
+import clothesin from "../components/clothes/clothesin.vue"
 Vue.use(Router)
 
 export default new Router({
@@ -41,7 +42,7 @@ export default new Router({
 	 name:"cloth",
 	 component:cloth,
 	 },
- 
+
 	 ]
 	},
 	  {
@@ -52,22 +53,22 @@ export default new Router({
 		  {
 		  path:"tehui",
 		  name:"tehui",
-		  component:tehui, 
+		  component:tehui,
 		  },
 		 {
 		 path:"tehui1",
 		 name:"tehui1",
-		 component:tehui1, 
+		 component:tehui1,
 		 },
 		 {
 		 path:"tehui2",
 		 name:"tehui2",
-		 component:tehui2, 
+		 component:tehui2,
 		 },
 		 {
 		 path:"tehui3",
 		 name:"tehui3",
-		 component:tehui3, 
+		 component:tehui3,
 		 },
 			  ]
 	  },
@@ -114,6 +115,11 @@ export default new Router({
 	 path:"/shopping",
 	 name:"shopping",
 	 component:shopping
-	 }
+   },
+   {
+   path:"clothesin",
+	 name:"clothesin",
+   component:clothesin,
+  }
   ]
 })

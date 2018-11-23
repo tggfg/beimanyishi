@@ -11,61 +11,18 @@
     </div>
 
 
-    <!-- <div class="wrapper" ref="salcmesWrapper">
-      <div class="content"> -->
-
-        <div class="content">
-          <div class="tu" v-for="(item,index) in goods">
-            <img :src="item.goodimg" />
-            <p class="zi">{{item.goodzi}}</p><p class="qian">{{item.good$}}</p>
-          </div>
-        </div>
-
-      <!-- </div>
-    </div> -->
 
 	</div>
 </template>
 
 
 <script>
-// import BScroll from "better-scroll";
-import Vuex from "vuex";
-export default {
-  computed: {
-    ...Vuex.mapState({
-      goods: state => state.clothes.goods
-    })
-  },
-  methods: {
-    ...Vuex.mapActions({
-      handlehome: "clothes/handlehome"
-    })
-  },
-  created() {
-    this.handlehome();
-  },
-  // mounted(){
-  //     this.scroll = new BScroll(this.$refs.salesWrapper,{
-  //     click:true,
-  //     pullUpLoad:true,
-  //   });
-  // }
-}
+
 </script>
 
 
 <style>
-.clothesin{
-  height:100%;
-  display: flex;
-  flex-direction: column;
-}
-.content{
-  flex:1;
-  overflow: auto;
-  margin-bottom:0.98rem;
-}
+
 .tou {
   height: 0.4rem;
   width: 100%;
@@ -97,19 +54,5 @@ export default {
   font-size: 0.29rem;
   float: left;
 }
-.qian {
-  font-size: 0.5rem;
-  float: right;
-  color: red;
-}
-*{
-  font-weight: normal;
-}
-.wrapper{
-  position: absolute;
-  top:1.3rem;
-  bottom:0;
-  width:100%;
-  overflow: hidden;
-}
+
 </style>
