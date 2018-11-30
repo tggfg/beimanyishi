@@ -1,9 +1,10 @@
 import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
+import home from "./home";
 Vue.use(Vuex);
 const state = {
- 
+  
 }
 
 const getters = {
@@ -22,9 +23,9 @@ const store =  new Vuex.Store({
     getters,
     mutations,
     actions,
-	mudules:{
-		
-	}
+    modules:{
+       home,
+    }
 })
 
 export default store;

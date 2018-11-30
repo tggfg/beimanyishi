@@ -1,0 +1,1014 @@
+{
+	"yifu": [
+					
+			{
+					"src": "https://s1.lativ.com.tw/m/i/37644/37644_M_61.jpg",
+					"id": 1,
+					"name": "针织衫",
+					"price": 89
+			},
+		      {
+					"src": "https://s2.lativ.com.tw/m/i/37372/37372_D_21_v.jpg",
+					"id": 2,
+					"name": "针织衫",
+					"price": 89
+			},
+			{
+					"src": "https://s4.lativ.com.tw/m/i/37843/37843_M_65.jpg",
+					"id": 3,
+					"name": "针织衫",
+					"price": 89
+		     },
+			{
+				"src": "https://s2.lativ.com.tw/m/i/37705/37705_M_06.jpg",
+				"id": 4,
+				"name": "针织衫",
+				"price": 89
+			},	
+			{
+				"src": "https://s4.lativ.com.tw/m/i/37562/37562_M_64.jpg",
+			
+				"id": 5,
+				"name": "针织衫",
+				"price": 89
+			},
+		      {
+				"src": "https://s1.lativ.com.tw/m/i/37311/37311_D_23_v.jpg",
+				"id": 6,
+				"name": "针织衫",
+				"price": 89
+			},
+			{
+				"src": "https://s4.lativ.com.tw/m/i/37319/37319_M_64.jpg",
+				"id": 7,
+				"name": "针织衫",
+				"price": 89
+		     },
+			{
+				"src": "https://s4.lativ.com.tw/m/i/38183/38183_D_23_v.jpg",
+				"id": 8,
+				"name": "针织衫",
+				"price": 89
+			}
+		],
+	"list1":[
+		{	
+		"src":"https://s3.lativ.com.tw/m/i/ProductShow/37549_event_1180X557m_181114_TW.jpg",
+		"id":1	
+	  },
+		{	
+		"src":"https://s2.lativ.com.tw/m/i/ProductShow/37457_1P680_1180X557m_181114_TW.jpg",
+		"id":2	
+	 },
+		{	
+		"src":"https://s4.lativ.com.tw/m/i/ProductShow/38244_38163_37625_38245_SWEATS_1180X557_181015_TW_0.jpg",
+		"id":3	
+	 },
+		{	
+		"src":"https://s1.lativ.com.tw/m/i/ProductShow/MICKEY-BD_1180X557_181108_TW_0.jpg",
+		"id":4	
+	 }
+	],
+	"sp":[
+		 {
+		
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":1,
+		"name":"针织衫",
+		"price":89,
+		"oldprice":99,
+		"goodsTypeId": 1
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":2,
+		"name":"针织衫",
+		"price":99,
+		"oldprice":199,
+		"goodsTypeId": 1
+		},
+		{
+		
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":3,
+		"name":"针织衫",
+		"price":89,
+		"oldprice":99,
+		"goodsTypeId": 1
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":4,
+		"name":"针织衫",
+		"price":99,
+		"oldprice":199,
+		"goodsTypeId": 1
+		},
+		{
+		
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":5,
+		"name":"针织衫",
+		"price":89,
+		"oldprice":99,
+		"goodsTypeId": 1
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_09.png",
+		"id":6,
+		"name":"针织衫",
+		"price":99,
+		"oldprice":199,
+		"goodsTypeId": 1
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":7,
+		"name":"针织衫",
+		"price":9,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":8,
+		"name":"针织衫",
+		"price":999,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":9,
+		"name":"针织衫",
+		"price":169,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":10,
+		"name":"针织衫",
+		"price":90,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":11,
+		"name":"针织衫",
+		"price":169,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_14.png",
+		"id":12,
+		"name":"针织衫",
+		"price":90,
+		"oldprice":199,
+		"goodsTypeId": 2
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":13,
+		"name":"针织衫",
+		"price":169,
+		"oldprice":199,
+		"goodsTypeId": 3
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":14,
+		"name":"针织衫",
+		"price":90,
+		"oldprice":199,
+		"goodsTypeId": 3
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":15,
+		"name":"针织衫",
+		"price":169,
+		"oldprice":199,
+		"goodsTypeId": 3
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":16,
+		"name":"针织衫",
+		"price":90,
+		"oldprice":199,
+		"goodsTypeId": 3
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":17,
+		"name":"针织衫",
+		"price":169,
+		"oldprice":199,
+		"goodsTypeId": 3
+		},
+		{
+		"src":"../../../../static/img/images/限时特惠@2x_10.png",
+		"id":18,
+		"name":"针织衫",
+		"price":90,
+		"oldprice":199,
+		"goodsTypeId": 3
+		}
+
+	],
+  "sp1":[
+	    {
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":1,
+			"name":"针织衫",
+			"price":89,
+			"oldprice":99,
+			"goodsTypeId": 1
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":2,
+			"name":"针织衫",
+			"price":99,
+			"oldprice":199,
+			"goodsTypeId": 1
+
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":3,
+			"name":"针织衫",
+			"price":9,
+			"oldprice":199,
+			"goodsTypeId": 1
+
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":4,
+			"name":"针织衫",
+			"price":999,
+			"oldprice":199,
+			"goodsTypeId": 1
+
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":5,
+			"name":"针织衫",
+			"price":169,
+			"oldprice":199,
+			"goodsTypeId": 2
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":6,
+			"name":"针织衫",
+			"price":90,
+			"oldprice":199,
+			"goodsTypeId": 2
+
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":7,
+			"name":"针织衫",
+			"price":169,
+			"oldprice":199,
+			"goodsTypeId": 2
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":8,
+			"name":"针织衫",
+			"price":90,
+			"oldprice":199,
+			"goodsTypeId": 2
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":9,
+			"name":"针织衫",
+			"price":169,
+			"oldprice":199,
+			"goodsTypeId": 2
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+			"id":10,
+			"name":"针织衫",
+			"price":90,
+			"oldprice":199,
+			"goodsTypeId": 3
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+			"id":11,
+			"name":"针织衫",
+			"price":169,
+			"oldprice":199,
+			"goodsTypeId": 3
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+			"id":12,
+			"name":"针织衫",
+			"price":90,
+			"oldprice":199,
+			"goodsTypeId": 3
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":13,
+			"name":"针织衫",
+			"price":169,
+			"oldprice":199,
+			"goodsTypeId": 3
+			},
+			{
+			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+			"id":14,
+			"name":"针织衫",
+			"price":90,
+			"oldprice":199,
+			"goodsTypeId": 3
+			}
+	  
+  ],
+  "sp2":[
+  		    {
+  				"src":"../../../../static/img/images/限时特惠@2x_13.png",
+  				"id":1,
+  				"name":"针织衫",
+  				"price":89,
+  				"oldprice":99,
+  				"goodsTypeId": 1
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_13.png",
+  				"id":2,
+  				"name":"针织衫",
+  				"price":99,
+  				"oldprice":199,
+  				"goodsTypeId": 1
+  	
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":3,
+  				"name":"针织衫",
+  				"price":9,
+  				"oldprice":199,
+  				"goodsTypeId": 1
+  	
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":4,
+  				"name":"针织衫",
+  				"price":999,
+  				"oldprice":199,
+  				"goodsTypeId": 1
+  	
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":5,
+  				"name":"针织衫",
+  				"price":169,
+  				"oldprice":199,
+  				"goodsTypeId": 2
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":6,
+  				"name":"针织衫",
+  				"price":90,
+  				"oldprice":199,
+  				"goodsTypeId": 2
+  	
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":7,
+  				"name":"针织衫",
+  				"price":169,
+  				"oldprice":199,
+  				"goodsTypeId": 2
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":8,
+  				"name":"针织衫",
+  				"price":90,
+  				"oldprice":199,
+  				"goodsTypeId": 2
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":9,
+  				"name":"针织衫",
+  				"price":169,
+  				"oldprice":199,
+  				"goodsTypeId": 2
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  				"id":10,
+  				"name":"针织衫",
+  				"price":90,
+  				"oldprice":199,
+  				"goodsTypeId": 3
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  				"id":11,
+  				"name":"针织衫",
+  				"price":169,
+  				"oldprice":199,
+  				"goodsTypeId": 3
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  				"id":12,
+  				"name":"针织衫",
+  				"price":90,
+  				"oldprice":199,
+  				"goodsTypeId": 3
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":13,
+  				"name":"针织衫",
+  				"price":169,
+  				"oldprice":199,
+  				"goodsTypeId": 3
+  				},
+  				{
+  				"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  				"id":14,
+  				"name":"针织衫",
+  				"price":90,
+  				"oldprice":199,
+  				"goodsTypeId": 3
+  				}
+  		  
+  ],
+  "sp3":[
+  	    {
+  			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  			"id":1,
+  			"name":"针织衫",
+  			"price":89,
+  			"oldprice":99,
+  			"goodsTypeId": 1
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  			"id":2,
+  			"name":"针织衫",
+  			"price":99,
+  			"oldprice":199,
+  			"goodsTypeId": 1
+  
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":3,
+  			"name":"针织衫",
+  			"price":9,
+  			"oldprice":199,
+  			"goodsTypeId": 1
+  
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":4,
+  			"name":"针织衫",
+  			"price":999,
+  			"oldprice":199,
+  			"goodsTypeId": 1
+  
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":5,
+  			"name":"针织衫",
+  			"price":169,
+  			"oldprice":199,
+  			"goodsTypeId": 2
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":6,
+  			"name":"针织衫",
+  			"price":90,
+  			"oldprice":199,
+  			"goodsTypeId": 2
+  
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":7,
+  			"name":"针织衫",
+  			"price":169,
+  			"oldprice":199,
+  			"goodsTypeId": 2
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":8,
+  			"name":"针织衫",
+  			"price":90,
+  			"oldprice":199,
+  			"goodsTypeId": 2
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":9,
+  			"name":"针织衫",
+  			"price":169,
+  			"oldprice":199,
+  			"goodsTypeId": 2
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  			"id":10,
+  			"name":"针织衫",
+  			"price":90,
+  			"oldprice":199,
+  			"goodsTypeId": 3
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  			"id":11,
+  			"name":"针织衫",
+  			"price":169,
+  			"oldprice":199,
+  			"goodsTypeId": 3
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_14.png",
+  			"id":12,
+  			"name":"针织衫",
+  			"price":90,
+  			"oldprice":199,
+  			"goodsTypeId": 3
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":13,
+  			"name":"针织衫",
+  			"price":169,
+  			"oldprice":199,
+  			"goodsTypeId": 3
+  			},
+  			{
+  			"src":"../../../../static/img/images/限时特惠@2x_10.png",
+  			"id":14,
+  			"name":"针织衫",
+  			"price":90,
+  			"oldprice":199,
+  			"goodsTypeId": 3
+  			}
+  	  
+  	
+  ],
+  "smalltu":[
+	  {
+	  "id":1,
+	  "src":"../../../../static/img/images/small1.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":2,
+	  "src":"../../../../static/img/images/small2.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":3,
+	  "src":"../../../../static/img/images/small3.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":4,
+	  "src":"../../../../static/img/images/small4.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":5,
+	  "src":"../../../../static/img/images/small5.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":6,
+	  "src":"../../../../static/img/images/small6.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":7,
+	  "src":"../../../../static/img/images/small7.png",
+	  "name":"长袖"
+	  },
+	  {
+	  "id":8,
+	  "src":"../../../../static/img/images/small8.png",
+	  "name":"长袖"
+	  }	
+	],
+	"sptu":[
+		{
+		"id":1,
+		"src":"../../../../static/img/images/1.png",
+		"name":"长袖",
+		"price":23,
+		"oldprice":34
+		},
+		{
+		"id":2,
+		"src":"../../../../static/img/images/2.png",
+		"name":"长袖",
+		"price":45,
+		"oldprice":34
+		},
+		{
+		"id":3,
+		"src":"../../../../static/img/images/3.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		},
+		{
+		"id":4,
+		"src":"../../../../static/img/images/1.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		},
+		{
+		"id":5,
+		"src":"../../../../static/img/images/2.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		},
+		{
+		"id":6,
+		"src":"../../../../static/img/images/small6.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		},
+		{
+		"id":7,
+		"src":"../../../../static/img/images/small7.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		},
+		{
+		"id":8,
+		"src":"../../../../static/img/images/small8.png",
+		"name":"长袖",
+		"price":50,
+		"oldprice":34
+		}	
+	],
+"list":[
+        {
+            "id": 1,
+            "name": "女装",
+            "parentId": 0,
+            "level": 1,
+						"picture":"https://s2.lativ.com.tw/m/i/CategoryIndex/2/37541_181113_TW.jpg"
+        },
+        {
+            "id": 2,
+            "name": "男装",
+            "parentId": 0,
+            "level": 1,
+						"picture":"https://s1.lativ.com.tw/m/i/CategoryIndex/1/37878_181102_TW.jpg"
+        },
+        {
+            "id": 3,
+            "name": "童装",
+            "parentId": 0,
+            "level": 1,
+						"picture":"https://s2.lativ.com.tw/m/i/CategoryIndex/3/37859_181102_TW.jpg"
+        },
+        {
+            "id": 4,
+            "name": "婴幼儿",
+            "parentId": 0,
+            "level": 1,
+						"picture":"https://s2.lativ.com.tw/m/i/CategoryIndex/4/37495_180914_TW.jpg"
+        },
+        {
+            "id": 5,
+            "name": "运动",
+            "parentId": 0,
+            "level": 1,
+						"picture":"https://s2.lativ.com.tw/m/i/CategoryIndex/5/37936_181002_2_TW.jpg"
+        },
+        {
+            "id": 6,
+            "name": "上装类",
+            "parentId": 1,
+            "level": 2,
+            "picture":"static/listimg/topw.png"
+        },
+        {
+            "id": 7,
+            "name": "上装类",
+            "parentId": 2,
+            "level": 2,
+            "picture":"static/listimg/manshirt.png"
+        },
+        {
+            "id": 8,
+            "name": "上装类",
+            "parentId": 3,
+            "level": 2,
+            "picture":"https://s2.lativ.com.tw/m/i/LevelTwoBanner/Tshirt-POLO/37267_K1_180906_TW.jpg"
+        },
+        {
+            "id": 9,
+            "name": "上装类",
+            "parentId": 4,
+            "level": 2,
+            "picture":"https://s2.lativ.com.tw/m/i/LevelTwoBanner/tops/37492_B1_181017.jpg"
+        },
+        {
+            "id": 10,
+            "name": "上装类",
+            "parentId": 5,
+            "level": 2,
+            "picture":"https://s1.lativ.com.tw/m/i/LevelTwoBanner/SPORT_WOMEN/37977_S1_180906_TW.jpg"
+        },
+        {
+            "id": 11,
+            "name": "衬衫类",
+            "parentId": 1,
+            "level": 2,
+            "picture":"static/listimg/shirt.png"
+        },
+        {
+            "id": 12,
+            "name": "衬衫",
+            "parentId": 2,
+            "level": 2,
+            "picture":"static/listimg/man.png"
+        },
+        {
+            "id": 13,
+            "name": "衬衫类",
+            "parentId": 3,
+            "level": 2,
+            "picture":"static/listimg/shirt.png"
+        },
+        {
+            "id": 14,
+            "name": "衬衫类",
+            "parentId": 4,
+            "level": 2,
+            "picture":"static/listimg/shirt.png"
+        },
+        {
+            "id": 15,
+            "name": "衬衫类",
+            "parentId": 5,
+            "level": 2,
+            "picture":"static/listimg/shirt.png"
+        },
+        {
+            "id": 16,
+            "name": "女长衫",
+            "parentId":6,
+            "level": 3,
+            "picture":"https://s4.lativ.com.tw/m/i/LevelThreePicture/Tshirt-POLO/long-sleeves/3422303_360.jpg"
+        },
+        {
+            "id": 17,
+            "name": "卫衣系列",
+            "parentId":6,
+            "level": 3,
+            "picture":"https://s1.lativ.com.tw/m/i/LevelThreePicture/Tshirt-POLO/sweatshirt/6_0.jpg"
+        },
+        {
+            "id": 18,
+            "name": "七分长袖",
+            "parentId":6,
+            "level": 3,
+            "picture":"https://s2.lativ.com.tw/m/i/LevelThreePicture/shirts/FLANNEL/3_0.jpg"
+        },
+        {
+            "id": 19,
+            "name": "短袖背心",
+            "parentId":6,
+            "level": 3,
+            "picture":"https://s3.lativ.com.tw/m/i/LevelThreePicture/KNIT/Knit-Sweater/3744001_360.jpg"
+        },
+        {
+            "id": 20,
+            "name": "男长衫",
+            "parentId":7,
+            "level": 3,
+            "picture":"https://s4.lativ.com.tw/m/i/LevelThreePicture/Tshirt-POLO/FLEECE/3217801_360.jpg"
+        },
+        {
+            "id": 21,
+            "name": "童装",
+            "parentId":8,
+            "level": 3,
+            "picture":"https://s1.lativ.com.tw/m/i/LevelThreePicture/Coat_category/AIRY-DOWN/3719905_360.jpg"
+        },
+        {
+            "id": 22,
+            "name": "婴幼儿",
+            "parentId":9,
+            "level": 3,
+            "picture":"https://s2.lativ.com.tw/m/i/LevelThreePicture/underwear/Heatup/3208604_360.jpg"
+        },
+        {
+            "id": 23,
+            "name": "运动服",
+            "parentId":10,
+            "level": 3,
+            "picture":"https://s3.lativ.com.tw/m/i/LevelThreePicture/bottoms/LongPants2/3498402_360.jpg"
+        },
+        {
+            "id": 24,
+            "name": "卫衣系列",
+            "parentId":7,
+            "level": 3,
+            "picture":"static/listimg/list_07.png"
+        },
+        {
+            "id": 25,
+            "name": "T恤",
+            "parentId":7,
+            "level": 3,
+            "picture":"static/listimg/t_07.png"
+        },
+        {
+            "id": 26,
+            "name": "女衬衫",
+            "parentId":11 ,
+            "level": 3,
+            "picture":"static/listimg/list_09.png"
+        },
+        {
+            "id": 27,
+            "name": "纯白T恤",
+            "parentId":11 ,
+            "level": 3,
+            "picture":"static/listimg/t2_09.png"
+        },
+        {
+            "id": 28,
+            "name": "卫衣",
+            "parentId":11 ,
+            "level": 3,
+            "picture":"static/listimg/t_10.png"
+        },
+        {
+            "id": 29,
+            "name": "男衬衫",
+            "parentId":12,
+            "level": 3,
+            "picture":"static/listimg/list_11.png"
+        },
+         {
+            "id": 30,
+            "name": "衬衫",
+            "parentId":12 ,
+            "level": 3,
+            "picture":"static/listimg/t_11.png"
+        },
+        {
+            "id": 31,
+            "name": "蓝色衬衫",
+            "parentId":12,
+            "level": 3,
+            "picture":"static/listimg/list_23.png"
+        }
+    ],
+    "goodlist":[
+        {
+            "id": 1,
+            "name": "女士时尚潮流风衣",
+            "price": 299,
+            "picture":"https://s4.lativ.com.tw/m/i/37628/37628_D_23_v.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 2,
+            "name": "时尚潮流风衣",
+            "price": 299,
+            "picture":"https://s1.lativ.com.tw/m/i/37199/37199_M_70.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 3,
+            "name": "女士风衣",
+            "price": 299,
+            "picture":"https://s4.lativ.com.tw/m/i/38163/38163_D_23_v.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 4,
+            "name": "时尚潮流风衣",
+            "price": 299,
+            "picture":"https://s3.lativ.com.tw/m/i/37867/37867_M_62.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 5,
+            "name": "女士风衣",
+            "price": 299,
+            "picture":"https://s2.lativ.com.tw/m/i/37359/37359_D_22_v.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 6,
+            "name": "时尚潮流风衣",
+            "price": 299,
+            "picture":"https://s4.lativ.com.tw/m/i/37218/37218_M_61.jpg",
+            "typeId_1": 1,
+            "typeId_2": 6,
+            "typeId_3": 16
+        },
+        {
+            "id": 7,
+            "name": "男士衬衫",
+            "price": 299,
+            "picture":"https://s1.lativ.com.tw/m/i/37558/37558_M_61.jpg",
+            "typeId_1": 2,
+            "typeId_2": 7,
+            "typeId_3": 20
+        },
+        {
+            "id": 8,
+            "name": "男士时尚潮流西装",
+            "price": 299,
+            "picture":"https://s4.lativ.com.tw/m/i/37251/37251_D_24_v.jpg",
+            "typeId_1": 2,
+            "typeId_2": 7,
+						"typeId_3":20
+       },
+			 {
+			 		"id": 9,
+			 		"name": "男士衬衫",
+			 		"price": 299,
+			 		"picture":"https://s1.lativ.com.tw/m/i/37558/37558_M_61.jpg",
+			 		"typeId_1": 2,
+			 		"typeId_2": 7,
+			 		"typeId_3": 20
+			 },
+			 {
+			 		"id": 10,
+			 		"name": "男士时尚潮流西装",
+			 		"price": 299,
+			 		"picture":"https://s3.lativ.com.tw/m/i/37418/37418_M_61.jpg",
+			 		"typeId_1": 2,
+			 		"typeId_2": 7,
+			 		"typeId_3":20
+			 },
+			 {
+			 	"id": 11,
+			 	"name": "男士衬衫",
+			 	"price": 299,
+			 	"picture":"https://s1.lativ.com.tw/m/i/37839/37839_M_61.jpg",
+			 	"typeId_1": 2,
+			 	"typeId_2": 7,
+			 	"typeId_3": 20
+			 },
+			 {
+			 	"id": 12,
+			 	"name": "男士时尚西装",
+			 	"price": 299,
+			 	"picture":"https://s3.lativ.com.tw/m/i/37418/37418_M_61.jpg",
+			 	"typeId_1": 2,
+			 	"typeId_2": 7,
+			 	"typeId_3":20
+			 }
+	]
+
+	
+	
+  
+  
+}

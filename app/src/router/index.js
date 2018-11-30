@@ -5,20 +5,68 @@ import classify  from "../components/classify/classify.vue"
 import clothes  from "../components/clothes/clothes.vue"
 import personal  from "../components/personal/personal.vue"
 import shopping  from "../components/shopping/shopping.vue"
-
+import discount from "../components/home/discount.vue"
+import index from "../components/home/index.vue"
+ import cloth from "../components/home/cloth.vue"
+import tehui from "../components/home/tehui/tehui.vue"
+import tehui1 from "../components/home/tehui/tehui1.vue"
+import tehui2 from "../components/home/tehui/tehui2.vue"
+import tehui3 from "../components/home/tehui/tehui3.vue"
+import search from "../components/home/search.vue"
+import find from "../components/home/Find.vue"
 Vue.use(Router)
 
 export default new Router({
   routes: [
    {
    	path:"/",
-   	redirect:"/home"
+   	redirect:"/home/index"
    },
    {
-   	path:"/home",
+   	path:"/home/index",
    	name:"home",
-   	component:home
+   	component:home,
+	children:[
+	{
+	path:"/home/index",
+	name:"index",
+	component:index,
+	},
+	{
+	path:"cloth",
+	name:"cloth",
+	component:cloth,
+	},
+
+	]
    },
+	 {
+	 path:"/discount",
+	 name:"discount",
+	 component:discount,
+	 children:[
+	 	{
+	 	path:"tehui/:index",
+	 	name:"tehui",
+	 	component:tehui, 
+	 	},
+		{
+		path:"tehui1/:index",
+		name:"tehui1",
+		component:tehui1, 
+		},
+		{
+		path:"tehui2/:index",
+		name:"tehui2",
+		component:tehui2, 
+		},
+		{
+		path:"tehui3/:index",
+		name:"tehui3",
+		component:tehui3, 
+		},
+	 		]
+	 },
 	 {
 	 path:"/classify",
 	 name:"classify",
@@ -38,6 +86,17 @@ export default new Router({
 	 path:"/shopping",
 	 name:"shopping",
 	 component:shopping
+	 },
+	 {
+		path:"/search",
+		name:"search",
+		component:search 
+	 },
+	 {
+		path:"/Find",
+		name:"find",
+		component:find 
 	 }
+	 
   ]
 })
