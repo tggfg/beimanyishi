@@ -15,7 +15,10 @@ import clothesin from "../components/clothes/clothesin";
 import gy from "../components/clothes/gy"
 import qp from "../components/clothes/qp"
 import youhui from "../components/clothes/youhui"
-
+//pk
+import login from "../components/login/login.vue"
+import register from "../components/register/register.vue"
+import forgetpasword from "../components/forgetpasword/forgetpasword.vue"
 
 // syx
 import discount from "../components/home/discount.vue"
@@ -54,6 +57,21 @@ export default new Router({
 	 component:cloth,
 	 },
 	 ]
+  },
+  {
+	  path: "/login",
+	  name: "login",
+	  component: login,
+  },
+  {
+	  path: "/register",
+	  name: "register",
+	  component: register,
+  },
+  {
+	  path: "/forgetpasword",
+	  name: "forgetpasword",
+	  component: forgetpasword,
   },
   {
     path:"/clothesin",
