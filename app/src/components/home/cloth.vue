@@ -3,12 +3,21 @@
 <div class="wrapper"  ref="clothWrapper">
 	<div class="yifu  content" >
 		<p class="bigtu">
+<<<<<<< HEAD
 			<img src="../../../static/img/images/tongzhuang_02.png">
 		</p>
 		<div class="smalltu">
 			<ul>
 				<li v-for="(item,index) in xiaotu">
 					<img :src="item.src">
+=======
+			<img :src="bigPic">
+		</p>
+		<div class="smalltu">
+			<ul>
+				<li v-for="(item,index) in small">
+					<img :src="item.picture">
+>>>>>>> shangshang
 					<p>{{item.name}}</p>
 				</li>
 				<li class="both">
@@ -31,11 +40,19 @@
 			<div class="fz">
 			  <ul class="fuzhuang">
 			    <li v-for="(item,index) in sptu">
+<<<<<<< HEAD
 				  <img :src="item.src">
 				  <p class="js">{{item.name}}</p>
 				  <p class="jieshao">
 				  <span>${{item.price}}</span>
 				  <span class="old">${{item.oldprice}}</span>
+=======
+				  <img :src="item.picture">
+				  <p class="js">{{item.name}}</p>
+				  <p class="jieshao">
+				  <span>${{item.price}}</span>
+				  <!-- <span class="old">${{item.oldprice}}</span> -->
+>>>>>>> shangshang
 				  </p>
 				</li>	
 			  </ul>
@@ -53,6 +70,15 @@
 		data(){
 			return{
 				pageNum: 1,
+<<<<<<< HEAD
+=======
+				index:0,
+				bigPic:"",
+				navs:[],
+				small:[],
+				id:1,
+				data:[]
+>>>>>>> shangshang
 			}
 		},
 		computed: {
@@ -64,6 +90,7 @@
 		methods: {
 			...Vuex.mapActions({
 				handleSmall: "home/handleSmall",
+<<<<<<< HEAD
 				handleTwopicture:"home/handleTwopicture"
 			}),
 
@@ -71,6 +98,80 @@
 		created() {
 			this.handleSmall();
 			this.handleTwopicture(this.pageNum);
+=======
+				handleTwopicture:"home/handleTwopicture",
+				handleRoute:"home/handleRoute",
+				
+			}),
+			...Vuex.mapMutations({
+				handleRemove:"home/handleRemove"
+			})
+
+		},
+		created() {
+			this.index=this.$route.query.index;
+			this.id =this.$route.query.id;
+			axios({
+			methods:"get",
+			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
+			}).then((data)=>{
+				this.data=data.data.data;
+				// console.log(data.data);
+				data.data.data.map((item)=>{
+					if(item.level==1){
+						this.navs.push(item);
+					}
+					if(item.level==3&&item.parentId==2001){
+						if(this.small.length<8){
+							this.small.push(item);
+						}
+					}
+				})
+				// console.log(this.small)
+			this.bigPic=this.navs[this.index].picture;
+		
+			})
+			this.handleSmall();
+			this.handleTwopicture({pageNum:this.pageNum,id:this.id});
+		},
+		beforeRouteUpdate(to,from,next){
+			this.small=[];
+			
+			this.pageNum=1;
+			this.index=to.query.index;
+			this.id=to.query.id;
+			this.bigPic=this.navs[this.index].picture;
+			
+			this.data.map((item)=>{
+				if(this.id==1001&&item.level==3&&item.parentId==2001){
+					if(this.small.length<8 ){
+						this.small.push(item);
+					}
+				}else if(this.id==1002&&item.level==3&&(item.parentId==2002||item.parentId==2006)){
+					if(this.small.length<8){
+						this.small.push(item);
+					}
+				}else if(this.id==1003&&item.level==3&&(item.parentId==2003||item.parentId==2007)){
+					if(this.small.length<8){
+						this.small.push(item);
+					}
+				}else if(this.id==1004&&item.level==3&&(item.parentId==2004||item.parentId==2008)){
+					if(this.small.length<8){
+						this.small.push(item);
+					}
+				}else if(this.id==1005&&item.level==3&&(item.parentId==2005||item.parentId==2009)){
+					if(this.small.length<8){
+						this.small.push(item);
+					}
+				}
+			})
+			this.handleRoute({pageNum:this.pageNum,id:this.id});
+			this.handleSmall();
+		  this.handleTwopicture({pageNum:this.pageNum,id:this.id})
+			next();
+			this.handleRemove();
+
+>>>>>>> shangshang
 		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.clothWrapper, {
@@ -80,7 +181,11 @@
 			});
 			
 			this.scroll.on("pullingUp", () => {
+<<<<<<< HEAD
 				this.handleTwopicture(++this.pageNum);	
+=======
+				this.handleTwopicture({pageNum:++this.pageNum,id:this.id});	
+>>>>>>> shangshang
 			})
 			
 		},

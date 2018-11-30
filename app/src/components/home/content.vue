@@ -21,7 +21,12 @@ export default{
 	justify-content:space-between ;
 	padding:0rem 0.32rem;
 	/* padding-top:0.24rem; */
+<<<<<<< HEAD
 	line-height: 0.44rem;
+=======
+	line-height: 0.44rem; 
+	margin-top:10px;
+>>>>>>> shangshang
 
 }	
 .cont>.content>li{

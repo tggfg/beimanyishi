@@ -2,16 +2,28 @@
 	<!-- <div class="wrapper"> -->
 	<div class="shang">
 		<div class="nav3">
+<<<<<<< HEAD
 		<ul>
 		<li v-for="(item,index) in nav1" :class="activeIndexnow==index?'active4':''"  @click="handleClick1(index)">
 			{{item.title}}
 		</li>
 		</ul>
+=======
+			<ul>
+				<li v-for="(item,index) in nav1" :class="activeIndexnow==index?'active4':''" @click="handleClick1(index)">
+					{{item.title}}
+				</li>
+			</ul>
+>>>>>>> shangshang
 		</div>
 		<div class="shangyi con wrapper" ref="wrapper">
 			<ul class="content">
 				<li v-for="(item,index) in sp3">
+<<<<<<< HEAD
 					<img :src="item.src">
+=======
+					<img :src="item.picture">
+>>>>>>> shangshang
 					<p>
 						<span>{{item.name}}</span>
 						<span>￥{{item.price}}</span>
@@ -25,6 +37,7 @@
 	import BScroll from 'better-scroll';
 	import Vuex from "vuex";
 	export default {
+<<<<<<< HEAD
 		components: {
 
 		},
@@ -60,6 +73,40 @@
 					}
 				],
 				activeIndexnow:0,
+=======
+	
+		data() {
+			return {
+				pageNum: 1,
+				inum: 1001,
+				activeIndexnow: 0,
+				nav1: [{
+						id: 1001,
+						name: "tehui3",
+						title: "女装"
+					},
+					{
+						id: 1002,
+						name: "tehui3",
+						title: "男装"
+					},
+					{
+						id: 1003,
+						name: "tehui3",
+						title: "童装"
+					},
+					{
+						id: 1004,
+						name: "tehui3",
+						title: "婴幼儿"
+					},
+					{
+						id: 1005,
+						name: "tehui3",
+						title: "运动"
+					}
+				],
+>>>>>>> shangshang
 			}
 		},
 		computed: {
@@ -67,6 +114,7 @@
 				sp3: state => state.home.sp3,
 			})
 		},
+<<<<<<< HEAD
    beforeRouteUpdate(to,from,next) {
 		this.id3 = to.params.id3;
 		 // console.log(this.id);
@@ -77,16 +125,50 @@
 //     props:{
 // 			id:Number,
 // 		},
+=======
+		beforeRouteUpdate(to, from, next) {
+			
+			this.index = to.params.index;
+			// this.id = to.params.id;
+			this.activeIndexnow = this.index-1001;
+			// console.log(this.index);
+			next();
+			this.clearArray3();
+			this.inum = this.index;
+			this.pageNum =1;
+			this.handleTehui3([this.pageNum, this.inum]);
+			this.handleGoodsFlagToggle4();
+
+		},
+
+>>>>>>> shangshang
 		methods: {
 			...Vuex.mapActions({
 				handleTehui3: "home/handleTehui3",
 			}),
+<<<<<<< HEAD
 		handleClick1(index){
 						this.activeIndexnow = index;
 					this.$router.push({name:this.nav1[index].name,query:{
 						index:this.nav1[index].id},
 						})			
 		   },
+=======
+			...Vuex.mapMutations({
+				clearArray3: "home/clearArray3",
+				handleGoodsFlagToggle4:"home/handleGoodsFlagToggle4"
+
+			}),
+			handleClick1(index) {
+				this.activeIndexnow = index;
+				this.$router.push({
+					name: this.nav1[index].name,
+					params: {
+					index: this.nav1[index].id,
+					},
+				})
+			},
+>>>>>>> shangshang
 		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.wrapper, {
@@ -94,8 +176,13 @@
 				pullUpLoad: true
 			});
 			this.scroll.on("pullingUp", () => {
+<<<<<<< HEAD
 				console.log(this.inum)
 				this.handleTehui3([++this.pageNum,this.inum]);
+=======
+				// console.log(this.inum)
+				this.handleTehui3([++this.pageNum, this.inum]);
+>>>>>>> shangshang
 			})
 		},
 		updated() {
@@ -103,11 +190,20 @@
 			this.scroll.refresh();
 			//当数据加载完毕以后通知better-scroll
 			this.scroll.finishPullUp();
+<<<<<<< HEAD
 			
 		},
 		created() {
 			console.log(this.inum);
 			this.handleTehui3([this.pageNum,this.inum]);
+=======
+
+		},
+		created() {
+			console.log(this.inum);
+			this.inum=this.$route.params.index;
+			this.handleTehui3([this.pageNum, this.inum]);
+>>>>>>> shangshang
 		},
 
 	}
@@ -159,6 +255,7 @@
 		width: 100%;
 		overflow: hidden;
 	}
+<<<<<<< HEAD
 	.nav3{
 		width:100%;
 		position:fixed;
@@ -182,5 +279,34 @@
 	.nav3 .active4{
 	background:#fff;
 	color:red;
+=======
+
+	.nav3 {
+		width: 100%;
+		position: fixed;
+		top: 2.5rem;
+		z-index: 3
+	}
+
+	.nav3 ul {
+		width: 100%;
+		background: #fff;
+		display: flex;
+		height: 0.64rem;
+		align-items: center;
+		padding-left: 5px;
+		/* color:yellow; */
+	}
+
+	.nav3 ul li {
+		margin-right: 30px;
+		float: left;
+		font-size: 14px;
+	}
+
+	.nav3 .active4 {
+		background: #fff;
+		color: red;
+>>>>>>> shangshang
 	}
 </style>

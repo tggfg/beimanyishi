@@ -19,10 +19,18 @@
 		</div>
 	  <div id="nav">
 	  <ul class="list">
+<<<<<<< HEAD
 			<li @click="handleshou()" :class="shouye">首页</li>
 			<li @click="handlxian()">限时优惠</li>
 		 <li v-for="(item,index) in navs" :class="activeIndex==index?list:''" @click="handleClick(index)">
 	  <router-link :to="{name:item.name}">{{item.title}}</router-link>
+=======
+			<li @click="handleshou()" :class="shouye" >首页</li>
+			<li @click="handlxian()" class="youhui">限时优惠</li>
+		 <li v-for="(item,index) in navs" :class="activeIndex==index?list:''" @click="handleClick(index,item.id)">
+	 <!-- <router-link :to="{name:item.name}">{{item.title}}</router-link> -->
+	 {{item.name}}
+>>>>>>> shangshang
 		 </li>
 	  </ul>
 	   </div>
@@ -32,11 +40,16 @@
 </template>
 <script>
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import Vuex from "vuex";
+>>>>>>> shangshang
 export default{
 	data(){
 		return{
     
       		 navs:[
+<<<<<<< HEAD
 //       			{
 // 					
 //       			name:"index",
@@ -76,17 +89,33 @@ export default{
       	  ],
 					shouye:"active",
 					list:"",
+=======
+
+      	  ],
+			shouye:"active",
+			list:"",
+>>>>>>> shangshang
       		activeIndex:0,
 					comName:"suoyou-com"
       	 }
        },
+<<<<<<< HEAD
   methods:{
       	 handleClick(index){
+=======
+
+  methods:{
+      	 handleClick(index,id){
+>>>>>>> shangshang
       		 this.activeIndex=index;
 					 this.shouye="";
 					 this.list="active";
 					
+<<<<<<< HEAD
 	        this.$router.push({name:"cloth",query:{goodsid:this.navs[index].id}});
+=======
+	        this.$router.push({name:"cloth",query:{index:index,id:id}});
+>>>>>>> shangshang
 				
       	 },
 				 handleSearch(){
@@ -100,10 +129,30 @@ export default{
 				 handlxian(){
 					 this.$router.push({name:"discount"})
 				 }
+<<<<<<< HEAD
        },
 
 	created(){
 	   this.$router.push({name:"index"});
+=======
+       
+		
+	},
+	created(){
+		axios({
+		methods:"get",
+		url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
+		}).then((data)=>{
+			data.data.data.map((item)=>{
+				if(item.level==1){
+					this.navs.push(item);
+				}
+			})
+		
+		})
+	   this.$router.push({name:"index"});
+     // this.handleMenu();
+>>>>>>> shangshang
   },
 
 }
@@ -119,6 +168,7 @@ export default{
 	 position:absolute;
 	 top:2.4rem;
 }
+<<<<<<< HEAD
 .header{
    width:100%;
    height:0.4rem;  
@@ -132,6 +182,17 @@ export default{
    background: #fff; 
    position:fixed;
   top:0.6rem;
+=======
+
+.home .search{
+   width:100%;
+   height:0.64rem;
+   background:#fff; 
+   position:fixed;
+    top:0.6rem;
+		/* left:0.4rem; */
+	margin-left:10px;
+>>>>>>> shangshang
 	 z-index:200;
 }
 .search_c{
@@ -209,11 +270,18 @@ export default{
 }
 #nav>.list>li{
    /* float:left; */
+<<<<<<< HEAD
 	font-size:16px;
 	text-align:center;
 	/* background: red; */
 	margin-left:10px;
    margin-right:14px;
+=======
+    width: 20%;
+	font-size:16px;
+	text-align:center;
+    /* background: orangered; */
+>>>>>>> shangshang
 }
 ::-webkit-scrollbar {
 display: none;/*隐藏滚轮*/
@@ -223,4 +291,12 @@ display: none;/*隐藏滚轮*/
 	color:#555555;
 	border-bottom:2px solid black;
 }
+<<<<<<< HEAD
+=======
+#nav>.list>.youhui{
+	/* margin-left:8px; */
+	width:2.8rem;
+	
+}
+>>>>>>> shangshang
 </style>

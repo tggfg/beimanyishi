@@ -9,5 +9,11 @@ export default {
 	pageNum:1,
 	sptu:[],
 	showBottom:true,
+<<<<<<< HEAD
+=======
+	data:[],
+	sousuo:[],
+	goodsFlag:true
+>>>>>>> shangshang
 	
 }
