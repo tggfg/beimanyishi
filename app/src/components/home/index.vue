@@ -1,4 +1,5 @@
 <template>
+<div>ss
 <div class="idx">
 	<goodslist-com></goodslist-com>
 </div>
@@ -17,4 +18,4 @@ components:{
 	width:100%;
     height:100%;
 }
-<style>
+</style>

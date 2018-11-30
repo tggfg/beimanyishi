@@ -2,15 +2,15 @@
 <div >
 	<div class="swiper-container">
     <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="(item,index) in banner">
+        <div class="swiper-slide" v-for="(item,index) in banner"  :key="index">
 			<img :src="item.src">
 		</div>
-    
+
     </div>
     <!-- 如果需要分页器 -->
     <div class="swiper-pagination"></div>
 </div>
-</div>	
+</div>
 </template>
 <script>
 import Vuex from "vuex";
@@ -24,7 +24,7 @@ created(){
  computed:{
 	 ...Vuex.mapState({
 		 banner:state=>state.home.banner,
-	 }) 
+	 })
  },
   methods:{
 	  ...Vuex.mapActions({
@@ -39,15 +39,15 @@ created(){
 		   disableOnInteraction:false,
 	   },
 
-    
+
     // 如果需要分页器
     pagination: {
       el: '.swiper-pagination',
     },
-    
-  })        
+
+  })
   },
-}	
+}
 </script>
 <style>
 .swiper-slide	img{
@@ -55,10 +55,7 @@ created(){
 	height:100%;
 /* 	position:fixed;
 	z-index:1; */
-	
-}	
-.swiper-container{
- /*  margin-top:108px; */
+
 }
 
 </style>

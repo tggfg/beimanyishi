@@ -6,24 +6,15 @@
 				<content-com></content-com>
 				<div class="goodslist">
 					<ul>
-<<<<<<< HEAD
-						<li><img src="../../../static/img/images/2.png"></li>
-						<li><img src="../../../static/img/images/3.png"></li>
-						<li>
-							<p v-for="(item,index) in tiao" :class="activeIndex==index?'active2':'bo1'" @click="handleChange(index)">{{item.title}}</p>
-						</li>
-						<li><img src="../../../static/img/images/3.png"></li>
-=======
 						<li><img src="https://s2.lativ.com.tw/m/i/Waterfall//37191_560_180915_TW_3.jpg"></li>
 						<li><img src="https://s3.lativ.com.tw/m/i/Waterfall//37391_560_181115_TW.jpg"></li>
 						<li>
-							<p v-for="(item,index) in tiao" :class="activeIndex==index?'active2':'bo1'" @click="handleChange(index)">{{item.title}}</p>
+							<p v-for="(item,index) in tiao" :class="activeIndex==index?'active2':'bo1'" @click="handleChange(index)" :key="index">{{item.title}}</p>
 						</li>
 						<li><img src="https://s3.lativ.com.tw/m/i/Waterfall//37239_560_180827_TW.jpg"></li>
->>>>>>> shangshang
 						<!-- 商品懒加载 -->
 
-						<li v-for="(item,index) in goodslist" @click="handleCk()">
+						<li v-for="(item,index) in goodslist" @click="handleCk()" :key="index">
 							<div>
 								<img :src="item.src">
 								<p>
@@ -49,10 +40,6 @@
 			"banner-com": banner,
 			"content-com": content,
 		},
-<<<<<<< HEAD
-=======
-	
->>>>>>> shangshang
 		data() {
 			return {
 				tiao: [{
@@ -73,11 +60,7 @@
 					}
 				],
 				activeIndex: 0,
-<<<<<<< HEAD
-				pageNum: 1,
-=======
 			    pageNum: 1,
->>>>>>> shangshang
 				yifu: [
 					{
 						src: "../../../../static/img/images/限时特惠@2x_13.png",
@@ -108,26 +91,18 @@
 				]
 			}
 		},
-	
+
 		computed: {
 			...Vuex.mapState({
 				goodslist: state => state.home.goodslist,
-<<<<<<< HEAD
-=======
 				// pageNum:state=>state.home.pageNum,
->>>>>>> shangshang
 			})
 		},
 		created() {
 			// thi/s.handleNow_getNowMovie(this.pageNum);
-<<<<<<< HEAD
-			this.handleCloth(this.pageNum);
-			
-=======
 // 			console.log(this.pageNum);
      		this.handleCloth(this.pageNum);
-// 			
->>>>>>> shangshang
+//
 		},
 		methods: {
 			handleChange(index) {
@@ -137,29 +112,26 @@
 			...Vuex.mapActions({
 				handleCloth: "home/handleCloth",
 			}),
-<<<<<<< HEAD
-=======
 			...Vuex.mapMutations({
 				handleGoodsFlagToggle:"home/handleGoodsFlagToggle"
 			}),
->>>>>>> shangshang
 			handleCk() {
 				alert(1)
 			}
 
-		},	
+		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.goodsWrapper, {
 				click: true,
 				// tap: true,
 				pullUpLoad: true,
-				
+
 			});
-			
+
 			this.scroll.on("pullingUp", () => {
-				this.handleCloth(++this.pageNum);	
+				this.handleCloth(++this.pageNum);
 			})
-			
+
 		},
 		updated () {
 			//重新计算高度
@@ -167,12 +139,9 @@
 			//当数据加载完毕以后通知better-scroll
 			this.scroll.finishPullUp();
 		},
-<<<<<<< HEAD
-=======
 		destroyed(){
 			this.handleGoodsFlagToggle()
 		}
->>>>>>> shangshang
 	}
 </script>
 <style>

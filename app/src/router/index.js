@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from "../components/home/home.vue"
-<<<<<<< HEAD
 import classify from "../components/classify/classify.vue"
 import clothes from "../components/clothes/clothes.vue"
 import personal from "../components/personal/personal.vue"
@@ -11,32 +10,23 @@ import listcloth from "../components/classify/listcloth.vue";
 import nav from "../components/classify/nav";
 import total from "../components/classify/total";
 import totalcloth from "../components/classify/totalcloth";
+//lmc
+import clothesin from "../components/clothes/clothesin";
+import gy from "../components/clothes/gy"
+import qp from "../components/clothes/qp"
+import youhui from "../components/clothes/youhui"
+
+
 // syx
 import discount from "../components/home/discount.vue"
 import index from "../components/home/index.vue"
 import cloth from "../components/home/cloth.vue"
-=======
-import classify  from "../components/classify/classify.vue"
-import clothes  from "../components/clothes/clothes.vue"
-import personal  from "../components/personal/personal.vue"
-import shopping  from "../components/shopping/shopping.vue"
-import discount from "../components/home/discount.vue"
-import index from "../components/home/index.vue"
- import cloth from "../components/home/cloth.vue"
->>>>>>> shangshang
 import tehui from "../components/home/tehui/tehui.vue"
 import tehui1 from "../components/home/tehui/tehui1.vue"
 import tehui2 from "../components/home/tehui/tehui2.vue"
 import tehui3 from "../components/home/tehui/tehui3.vue"
-<<<<<<< HEAD
-<<<<<<< HEAD
-import search from "../components/home/search.vue"
-import clothesin from "../components/clothes/clothesin.vue"
-import collection from "../components/personal/second/collection.vue"
-=======
 import search from "../components/home/search.vue";
 import message from "../components/home/message.vue";
->>>>>>> wangyanru
 Vue.use(Router)
 
 export default new Router({
@@ -45,100 +35,6 @@ export default new Router({
       redirect: "/home/index"
     },
     {
-<<<<<<< HEAD
-      path: "/home/index",
-      name: "home",
-      component: home,
-      children: [{
-          path: "/home/index",
-          name: "index",
-          component: index,
-        },
-        {
-          path: "cloth",
-          name: "cloth",
-          component: cloth,
-        },
-
-      ]
-    },
-    {
-      path: "/discount",
-      name: "discount",
-      component: discount,
-      children: [{
-          path: "tehui",
-          name: "tehui",
-          component: tehui,
-        },
-        {
-          path: "tehui1",
-          name: "tehui1",
-          component: tehui1,
-        },
-        {
-          path: "tehui2",
-          name: "tehui2",
-          component: tehui2,
-        },
-        {
-          path: "tehui3",
-          name: "tehui3",
-          component: tehui3,
-        },
-      ]
-    },
-    {
-      path: "/classify",
-      name: "classify",
-      component: classify,
-      children: [{
-        path: "nav",
-        name: "nav",
-        component: nav
-      }]
-    },
-    {
-      path: "/listdetail",
-      name: "listdetail",
-      component: listdetail,
-      children: [{
-        path: "listcloth",
-        name: "listcloth",
-        component: listcloth
-      }]
-    },
-    {
-      path: "/total",
-      name: "total",
-      component: total
-    },
-    {
-      path: "/clothes",
-      name: "clothes",
-      component: clothes
-    },
-    {
-      path: "/personal",
-      name: "personal",
-      component: personal
-    },
-    {
-      path: "/shopping",
-      name: "shopping",
-      component: shopping
-    },
-    {
-      path: "clothesin",
-      name: "clothesin",
-      component: clothesin,
-    },
-    {
-      path: "/second/collection",
-      name: "collection",
-      component: collection
-    },
-=======
 		path:"/",
 		redirect:"/home/index"
 	},
@@ -157,9 +53,29 @@ export default new Router({
 	 name:"cloth",
 	 component:cloth,
 	 },
- 
 	 ]
-	},
+  },
+  {
+    path:"/clothesin",
+    name:"clothesin",
+    component:clothesin
+  },
+  {
+    path:"/qp",
+    name:"qp",
+    component:qp
+  },
+  {
+    path:"/gy",
+    name:"gy",
+    component:gy
+  },
+  {
+    path:"/youhui",
+    name:"youhui",
+    component:youhui
+  },
+
 	  {
 	  path:"/discount",
 	  name:"discount",
@@ -168,22 +84,22 @@ export default new Router({
 		  {
 		  path:"tehui",
 		  name:"tehui",
-		  component:tehui, 
+		  component:tehui,
 		  },
 		 {
 		 path:"tehui1",
 		 name:"tehui1",
-		 component:tehui1, 
+		 component:tehui1,
 		 },
 		 {
 		 path:"tehui2",
 		 name:"tehui2",
-		 component:tehui2, 
+		 component:tehui2,
 		 },
 		 {
 		 path:"tehui3",
 		 name:"tehui3",
-		 component:tehui3, 
+		 component:tehui3,
 		 },
 			  ]
 	  },
@@ -192,63 +108,6 @@ export default new Router({
 		  name:"message",
 		  component:message
 	  },
-=======
-import search from "../components/home/search.vue"
-import find from "../components/home/Find.vue"
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-   {
-   	path:"/",
-   	redirect:"/home/index"
-   },
-   {
-   	path:"/home/index",
-   	name:"home",
-   	component:home,
-	children:[
-	{
-	path:"/home/index",
-	name:"index",
-	component:index,
-	},
-	{
-	path:"cloth",
-	name:"cloth",
-	component:cloth,
-	},
-
-	]
-   },
->>>>>>> shangshang
-	 {
-	 path:"/discount",
-	 name:"discount",
-	 component:discount,
-	 children:[
-	 	{
-	 	path:"tehui/:index",
-	 	name:"tehui",
-	 	component:tehui, 
-	 	},
-		{
-		path:"tehui1/:index",
-		name:"tehui1",
-		component:tehui1, 
-		},
-		{
-		path:"tehui2/:index",
-		name:"tehui2",
-		component:tehui2, 
-		},
-		{
-		path:"tehui3/:index",
-		name:"tehui3",
-		component:tehui3, 
-		},
-	 		]
-	 },
 	 {
 	 path:"/classify",
 	 name:"classify",
@@ -290,30 +149,17 @@ export default new Router({
 	 name:"clothes",
 	 component:clothes
 	 },
-	 {
-	 path:"/personal",
-	 name:"personal",
-	 component:personal
-	 },
+
 	 {
 	 path:"/shopping",
 	 name:"shopping",
 	 component:shopping
+   },
+{
+	 path:"/personal",
+	 name:"personal",
+	 component:personal
 	 },
-	 {
-		path:"/search",
-		name:"search",
-		component:search 
-	 },
-	 {
-		path:"/Find",
-		name:"find",
-		component:find 
-	 }
-<<<<<<< HEAD
->>>>>>> wangyanru
-=======
-	 
->>>>>>> shangshang
   ]
+
 })

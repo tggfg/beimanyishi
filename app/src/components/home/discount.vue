@@ -4,18 +4,13 @@
 <xianshitehui-com></xianshitehui-com>
 <div class="discount">
 	<ul>
-	<li v-for="(item,index) in nav" :class="activeIndex==index?'active3':''" @click="handleClick(index)">
-<<<<<<< HEAD
+	<li v-for="(item,index) in nav" :class="activeIndex==index?'active3':''" @click="handleClick(index)"  :key="index">
 	{{item.title}}
-	</li>	
-=======
-	{{item.title}} 
 	<div  :class="jiantou==index?'jiantou':''"></div>
-	</li>	
- 
->>>>>>> shangshang
+	</li>
+
 	</ul>
-	
+
 </div>
 <!-- <div class="nav3">
 <ul>
@@ -60,36 +55,6 @@ export default{
 			},
 			],
 			activeIndex:0,
-<<<<<<< HEAD
-// 			nav1:[
-// 				{
-// 				id:1,
-// 				name:"tehui",
-// 				title:"女装"
-// 				},
-// 				{
-// 				id:2,
-// 				name:"tehui",
-// 				title:"男装"
-// 				},
-// 				{
-// 				id:3,
-// 				name:"tehui",
-// 				title:"童装"
-// 				},
-// 				{
-// 				id:4,
-// 				name:"tehui",
-// 				title:"婴幼儿"	
-// 				},
-// 				{
-// 				id:5,
-// 				name:"tehui",
-// 				title:"运动"
-// 				}
-// 			],
-=======
->>>>>>> shangshang
 			sp:[
 				{
 				src:"../../../../static/img/images/限时特惠@2x_09.png",
@@ -127,23 +92,16 @@ export default{
 				name:"针织衫",
 				price:89
 				}
-				
+
 			],
 			shuju:0,
 			activeIndexnow:0,
-<<<<<<< HEAD
-		}
-	},
-	computed:{
-
-	},
-=======
 			num:0,
 			num1:0,
 			jiantou:0,
 		}
 	},
-	// beforeRouteUpdate(to, from, next) { 
+	// beforeRouteUpdate(to, from, next) {
      // if(this.index=""){
    		// this.$router.push({name:"tehui",params:{index:1}});
       // }
@@ -155,21 +113,11 @@ export default{
 // // // 			this.pageNum =1;
 // // // 			this.handleTehui([this.pageNum, this.inum]);
    // },
->>>>>>> shangshang
-  
+
 	methods:{
 		handleClick(i){
 			this.activeIndex = i;
 			this.shuju=i;
-<<<<<<< HEAD
-		    // console.log(this.nav[i]);
-		this.$router.push({name:this.nav[i].name
-			 });
-		},
-		handleClick1(index){
-			this.activeIndexnow = index;
-			this.$router.push({name:this.nav1[index].name,query:{
-=======
 			this.jiantou=i;
 		  this.$router.push({name:this.nav[i].name,params:{index:1001}})
 		},
@@ -177,19 +125,14 @@ export default{
 			this.activeIndexnow = index;
 			this.num++;
 			this.$router.push({name:this.nav1[index].name,params:{
->>>>>>> shangshang
 				index:this.nav1[index].id
 			},
-			
+
 		 })
 	  },
 	},
 	created(){
-<<<<<<< HEAD
-		   this.$router.push({name:"tehui"});
-=======
 		   this.$router.push({name:"tehui",params:{index:1001}});
->>>>>>> shangshang
  	}
 }
 </script>
@@ -206,14 +149,10 @@ export default{
 }
 .discount ul{
 	width:100%;
-	display: flex;	
+	display: flex;
 	position:relative;
 	z-index:2;
-<<<<<<< HEAD
-	
-=======
 	bottom:6px;
->>>>>>> shangshang
 }
 .discount li{
   float:left;
@@ -221,12 +160,8 @@ export default{
   height:1.14rem;
  padding-top:10px;
   /* line-height: 1.14rem; */
-<<<<<<< HEAD
-  background:#F4F4F4;
-=======
   background:#F4F4F4 ;
 	/* background-size:0.2rem; */
->>>>>>> shangshang
   border-right:1px solid #999999;
   color:#5A5A5A;
   font-size:16px;
@@ -240,36 +175,21 @@ export default{
 .nav3{
 	width:100%;
 	position:fixed;
-<<<<<<< HEAD
-	top:2.5rem;
-=======
 	top:2.9rem;
->>>>>>> shangshang
 	z-index:3
 }
 .nav3 ul{
 	width:100%;
-<<<<<<< HEAD
-	background:#fff;
-	display:flex;
-    height:0.64rem;
-	align-items: center;
-	padding-left:5px;
-=======
 	/* background:red; */
 	display:flex;
   height:0.64rem;
 	align-items: center;
 	padding-left:15px;
->>>>>>> shangshang
 	/* color:yellow; */
 }
 .nav3 ul li{
 	margin-right:30px;
-<<<<<<< HEAD
-=======
   margin-left:10px;
->>>>>>> shangshang
 	float:left;
 	font-size:14px;
 }
@@ -277,8 +197,6 @@ export default{
   background:#fff;
   color:red;
 }
-<<<<<<< HEAD
-=======
 .jiantou{
 	width:10px;
 	height:10px;
@@ -287,6 +205,5 @@ export default{
 	margin-left:44px;
 	/* left:50px; */
  	transform: rotate(45deg);
-} 
->>>>>>> shangshang
+}
 </style>

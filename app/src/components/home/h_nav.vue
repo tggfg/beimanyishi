@@ -1,7 +1,7 @@
 <template>
 <div id="nav">
   <ul class="list">
-	 <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index)">
+	 <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index)" :key="index">
   <router-link :to="{name:'item.name'}">{{item.title}}</router-link>
 	 </li>
   </ul>
@@ -40,7 +40,7 @@ export default{
      },
 		 {
 		 name:"yundong",
-		 title:"运动 ", 
+		 title:"运动 ",
 		 }
 	  ],
 		activeIndex:0
@@ -57,7 +57,7 @@ export default{
 #nav{
 	width:100%;
 	height:0.72rem;
-	 background: #fff; 
+	 background: #fff;
 	position:fixed;
   top:1.68rem;
 	line-height: 0.6rem;

@@ -1,8 +1,7 @@
 <template>
 <div class="footer" v-if="showBottom">
 <ul>
-	 <li v-for="(item,index) in navs" k>
-
+	 <li v-for="(item,index) in navs" :key="index">
 		 <router-link :to="{name:item.name}"><i  :class="'iconfont '+item.iname"></i>
 		 <span>{{item.title}}</span></router-link>
 	 </li>
@@ -42,14 +41,9 @@ export default{
 					iname:"icon-tianchongxing-",
 					name:"personal",
 					title:"个人"
-<<<<<<< HEAD
 				}
-	  	]
-=======
-				}			
 	  	],
 		 // showBottom:true,
->>>>>>> shangshang
 		}
 	},
 computed:{
@@ -110,9 +104,5 @@ computed:{
 	font-size:12px;
 	color:#384355;
 }
-<<<<<<< HEAD
-</style>
-=======
 
 </style>
->>>>>>> shangshang

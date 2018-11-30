@@ -2,29 +2,17 @@
 	<!-- <div class="wrapper"> -->
 	<div class="shang">
 		<div class="nav3">
-<<<<<<< HEAD
-		<ul>
-		<li v-for="(item,index) in nav1" :class="activeIndexnow==index?'active4':''"  @click="handleClick1(index)">
-			{{item.title}}
-		</li>
-		</ul>
-=======
 			<ul>
-				<li v-for="(item,index) in nav1" :class="activeIndexnow==index?'active4':''" @click="handleClick1(index)">
+				<li v-for="(item,index) in nav1" :class="activeIndexnow==index?'active4':''" @click="handleClick1(index)" :key="index">
 					{{item.title}}
 					<!-- <div class="jiantou"></div> -->
 				</li>
 			</ul>
->>>>>>> shangshang
 		</div>
 		<div class="shangyi con wrapper" ref="wrapper">
 			<ul class="content">
-				<li v-for="(item,index) in sp1">
-<<<<<<< HEAD
-					<img :src="item.src">
-=======
+				<li v-for="(item,index) in sp1" :key="index">
 					<img :src="item.picture">
->>>>>>> shangshang
 					<p>
 						<span>{{item.name}}</span>
 						<span>￥{{item.price}}</span>
@@ -38,45 +26,7 @@
 	import BScroll from 'better-scroll';
 	import Vuex from "vuex";
 	export default {
-<<<<<<< HEAD
-		components: {
 
-		},
-		data() {
-			return {
-				pageNum: 1,
-				inum:1,
-				nav1:[
-					{
-					id:1,
-					name:"tehui1",
-					title:"女装"
-					},
-					{
-					id:2,
-					name:"tehui1",
-					title:"男装"
-					},
-					{
-					id:3,
-					name:"tehui1",
-					title:"童装"
-					},
-					{
-					id:4,
-					name:"tehui1",
-					title:"婴幼儿"	
-					},
-					{
-					id:5,
-					name:"tehui1",
-					title:"运动"
-					}
-				],
-				activeIndexnow:0,
-
-=======
-	
 		data() {
 			return {
 				pageNum: 1,
@@ -108,7 +58,6 @@
 						title: "运动"
 					}
 				],
->>>>>>> shangshang
 			}
 		},
 		computed: {
@@ -116,29 +65,8 @@
 				sp1: state => state.home.sp1,
 			})
 		},
-<<<<<<< HEAD
-   beforeRouteUpdate(to,from,next) {
-		this.id1 = to.params.id1;
-		 // console.log(this.id);
-		next();
-		this.inum = this.id1;
-		console.log(this.inum);
-	  },
-//     props:{
-// 			id:Number,
-// 		},
-		methods: {
-			...Vuex.mapActions({
-				handleTehui1: "home/handleTehui1",
-			}),
-					handleClick1(index){
-							this.activeIndexnow = index;
-						this.$router.push({name:this.nav1[index].name,query:{
-							index:this.nav1[index].id},
-							})			
-=======
 		beforeRouteUpdate(to, from, next) {
-			
+
 			this.index = to.params.index;
 			// this.id = to.params.id;
 			this.activeIndexnow = this.index-1001;
@@ -170,26 +98,17 @@
 					index: this.nav1[index].id,
 					},
 				})
->>>>>>> shangshang
 			},
 		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.wrapper, {
 				click: true,
-<<<<<<< HEAD
-				pullUpLoad: true
-			});
-			this.scroll.on("pullingUp", () => {
-				console.log(this.inum)
-				this.handleTehui1([++this.pageNum,this.inum]);
-=======
 				tap:true,
 				pullUpLoad: true
 			});
 			this.scroll.on("pullingUp", () => {
 				// console.log(this.inum)
 				this.handleTehui1([++this.pageNum, this.inum]);
->>>>>>> shangshang
 			})
 		},
 		updated() {
@@ -197,20 +116,12 @@
 			this.scroll.refresh();
 			//当数据加载完毕以后通知better-scroll
 			this.scroll.finishPullUp();
-<<<<<<< HEAD
-			
-		},
-		created() {
-			console.log(this.inum);
-			this.handleTehui1([this.pageNum,this.inum]);
-=======
 
 		},
 		created() {
 			console.log(this.inum);
 			this.inum=this.$route.params.index;
 			this.handleTehui1([this.pageNum, this.inum]);
->>>>>>> shangshang
 		},
 
 	}
@@ -262,32 +173,6 @@
 		width: 100%;
 		overflow: hidden;
 	}
-<<<<<<< HEAD
-	.nav3{
-		width:100%;
-		position:fixed;
-		top:2.5rem;
-		z-index:3
-	}
-	.nav3 ul{
-		width:100%;
-		background:#fff;
-		display:flex;
-	    height:0.64rem;
-		align-items: center;
-		padding-left:5px;
-		/* color:yellow; */
-	}
-	.nav3 ul li{
-		margin-right:30px;
-		float:left;
-		font-size:14px;
-	}
-	.nav3 .active4{
-	  background:#fff;
-	  color:red;
-	}
-=======
 
 	.nav3 {
 		width: 100%;
@@ -320,5 +205,4 @@
 		color: red;
 	}
 
->>>>>>> shangshang
 </style>

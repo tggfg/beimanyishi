@@ -3,21 +3,12 @@
 <div class="wrapper"  ref="clothWrapper">
 	<div class="yifu  content" >
 		<p class="bigtu">
-<<<<<<< HEAD
-			<img src="../../../static/img/images/tongzhuang_02.png">
-		</p>
-		<div class="smalltu">
-			<ul>
-				<li v-for="(item,index) in xiaotu">
-					<img :src="item.src">
-=======
 			<img :src="bigPic">
 		</p>
 		<div class="smalltu">
 			<ul>
-				<li v-for="(item,index) in small">
+				<li v-for="(item,index) in small"  :key="index">
 					<img :src="item.picture">
->>>>>>> shangshang
 					<p>{{item.name}}</p>
 				</li>
 				<li class="both">
@@ -39,22 +30,14 @@
 			<!-- 商品列表 -->
 			<div class="fz">
 			  <ul class="fuzhuang">
-			    <li v-for="(item,index) in sptu">
-<<<<<<< HEAD
-				  <img :src="item.src">
-				  <p class="js">{{item.name}}</p>
-				  <p class="jieshao">
-				  <span>${{item.price}}</span>
-				  <span class="old">${{item.oldprice}}</span>
-=======
+			    <li v-for="(item,index) in sptu" :key="index">
 				  <img :src="item.picture">
 				  <p class="js">{{item.name}}</p>
 				  <p class="jieshao">
 				  <span>${{item.price}}</span>
 				  <!-- <span class="old">${{item.oldprice}}</span> -->
->>>>>>> shangshang
 				  </p>
-				</li>	
+				</li>
 			  </ul>
 			</div>
 		</div>
@@ -70,15 +53,12 @@
 		data(){
 			return{
 				pageNum: 1,
-<<<<<<< HEAD
-=======
 				index:0,
 				bigPic:"",
 				navs:[],
 				small:[],
 				id:1,
 				data:[]
->>>>>>> shangshang
 			}
 		},
 		computed: {
@@ -90,18 +70,9 @@
 		methods: {
 			...Vuex.mapActions({
 				handleSmall: "home/handleSmall",
-<<<<<<< HEAD
-				handleTwopicture:"home/handleTwopicture"
-			}),
-
-		},
-		created() {
-			this.handleSmall();
-			this.handleTwopicture(this.pageNum);
-=======
 				handleTwopicture:"home/handleTwopicture",
 				handleRoute:"home/handleRoute",
-				
+
 			}),
 			...Vuex.mapMutations({
 				handleRemove:"home/handleRemove"
@@ -129,19 +100,19 @@
 				})
 				// console.log(this.small)
 			this.bigPic=this.navs[this.index].picture;
-		
+
 			})
 			this.handleSmall();
 			this.handleTwopicture({pageNum:this.pageNum,id:this.id});
 		},
 		beforeRouteUpdate(to,from,next){
 			this.small=[];
-			
+
 			this.pageNum=1;
 			this.index=to.query.index;
 			this.id=to.query.id;
 			this.bigPic=this.navs[this.index].picture;
-			
+
 			this.data.map((item)=>{
 				if(this.id==1001&&item.level==3&&item.parentId==2001){
 					if(this.small.length<8 ){
@@ -171,23 +142,18 @@
 			next();
 			this.handleRemove();
 
->>>>>>> shangshang
 		},
 		mounted() {
 			this.scroll = new BScroll(this.$refs.clothWrapper, {
 				click: true,
 				pullUpLoad: true,
-				
+
 			});
-			
+
 			this.scroll.on("pullingUp", () => {
-<<<<<<< HEAD
-				this.handleTwopicture(++this.pageNum);	
-=======
-				this.handleTwopicture({pageNum:++this.pageNum,id:this.id});	
->>>>>>> shangshang
+				this.handleTwopicture({pageNum:++this.pageNum,id:this.id});
 			})
-			
+
 		},
 	updated () {
 		//重新计算高度
@@ -280,7 +246,7 @@
 	}
 	.fz .fuzhuang{
 	width:100%;
-	display:flex; 
+	display:flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	padding:0 13px;
@@ -302,7 +268,7 @@
 	margin-top:5px;
 	}
 	.fz .fuzhuang  .js{
-	margin-top:5px;	
+	margin-top:5px;
 	}
     .jieshao span:nth-child(1){
 	  font-size:20px;
@@ -314,6 +280,6 @@
 			bottom: .98rem;
 			width: 100%;
 			overflow: hidden;
-			
+
  }
 </style>

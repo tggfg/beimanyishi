@@ -4,17 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from "./store"
-<<<<<<< HEAD
-import "./reset.css";
-import "./rem.js";
-import "../static/css/iconfont/iconfont.css";
-=======
 import "./reset.css"
 import "./rem.js"
 import "../static/css/iconfont/iconfont.css"
 // Vue.prototype.observer  = center;
 
->>>>>>> shangshang
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

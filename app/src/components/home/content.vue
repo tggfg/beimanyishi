@@ -4,7 +4,7 @@
 	  <li><img src="../../../static/icon/gengduo3@2x.png">累计评价</li>
 	  <li><img src="../../../static/icon/gengduo3@2x.png">满￥99顺丰包邮</li>
 	  <li><img src="../../../static/icon/gengduo3@2x.png">退货补贴</li>
-	  
+
 	</ul>
 </div>
 </template>
@@ -21,14 +21,10 @@ export default{
 	justify-content:space-between ;
 	padding:0rem 0.32rem;
 	/* padding-top:0.24rem; */
-<<<<<<< HEAD
 	line-height: 0.44rem;
-=======
-	line-height: 0.44rem; 
 	margin-top:10px;
->>>>>>> shangshang
 
-}	
+}
 .cont>.content>li{
    /*  width:1.6rem; */
 	  height:0.5rem;

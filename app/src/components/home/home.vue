@@ -15,108 +15,47 @@
 		<img src="../../../static/icon/xiaoxi@2x.png">
 		<span>消息</span>
 		</div>
-		</p>
+
 		</div>
 	  <div id="nav">
 	  <ul class="list">
-<<<<<<< HEAD
-			<li @click="handleshou()" :class="shouye">首页</li>
-			<li @click="handlxian()">限时优惠</li>
-		 <li v-for="(item,index) in navs" :class="activeIndex==index?list:''" @click="handleClick(index)">
-	  <router-link :to="{name:item.name}">{{item.title}}</router-link>
-=======
 			<li @click="handleshou()" :class="shouye" >首页</li>
 			<li @click="handlxian()" class="youhui">限时优惠</li>
-		 <li v-for="(item,index) in navs" :class="activeIndex==index?list:''" @click="handleClick(index,item.id)">
+		 <li v-for="(item,index) in navs" :class="activeIndex==index?list:''" @click="handleClick(index,item.id)" :key="index">
 	 <!-- <router-link :to="{name:item.name}">{{item.title}}</router-link> -->
 	 {{item.name}}
->>>>>>> shangshang
 		 </li>
 	  </ul>
 	   </div>
 		</div>
    <router-view></router-view>
-	</div>	
+	</div>
 </template>
 <script>
 import axios from "axios";
-<<<<<<< HEAD
-=======
 import Vuex from "vuex";
->>>>>>> shangshang
 export default{
 	data(){
 		return{
-    
+
       		 navs:[
-<<<<<<< HEAD
-//       			{
-// 					
-//       			name:"index",
-//       		  title:"首页" ,
-//             },
-//       			{
-// 			
-//       		 name:"discount",
-//       		 title:"限时优惠",
-//             },
-      			{
-			       id:1,
-      			name:"cloth",
-      		  title:"女装 " ,
-	         	
-            },
-      			{
-	         id:2,
-      		 name:"cloth",
-      		 title:"男装 " ,
-            },
-      			{
-			     id:3,
-      		 name:"cloth",
-      		 title:"儿童  " ,
-      		 },
-      		 {
-			     id:4,
-      		 name:"cloth",
-      		 title:"婴幼儿" ,
-           },
-      		 {
-				  id:5,
-      		 name:"cloth",
-      		 title:"运动 ", 
-      		 }
-      	  ],
-					shouye:"active",
-					list:"",
-=======
 
       	  ],
 			shouye:"active",
 			list:"",
->>>>>>> shangshang
       		activeIndex:0,
 					comName:"suoyou-com"
       	 }
        },
-<<<<<<< HEAD
-  methods:{
-      	 handleClick(index){
-=======
 
   methods:{
       	 handleClick(index,id){
->>>>>>> shangshang
       		 this.activeIndex=index;
 					 this.shouye="";
 					 this.list="active";
-					
-<<<<<<< HEAD
-	        this.$router.push({name:"cloth",query:{goodsid:this.navs[index].id}});
-=======
+
 	        this.$router.push({name:"cloth",query:{index:index,id:id}});
->>>>>>> shangshang
-				
+
       	 },
 				 handleSearch(){
 				  this.$router.push({name:"search"});
@@ -129,14 +68,8 @@ export default{
 				 handlxian(){
 					 this.$router.push({name:"discount"})
 				 }
-<<<<<<< HEAD
-       },
 
-	created(){
-	   this.$router.push({name:"index"});
-=======
-       
-		
+
 	},
 	created(){
 		axios({
@@ -148,11 +81,10 @@ export default{
 					this.navs.push(item);
 				}
 			})
-		
+
 		})
 	   this.$router.push({name:"index"});
      // this.handleMenu();
->>>>>>> shangshang
   },
 
 }
@@ -168,31 +100,15 @@ export default{
 	 position:absolute;
 	 top:2.4rem;
 }
-<<<<<<< HEAD
-.header{
-   width:100%;
-   height:0.4rem;  
-	/* position:fixed; */
-   background: #fff; 
-/* 	 z-index:100; */
-}
-.home>.search{
-   width:100%;
-   height:0.64rem;
-   background: #fff; 
-   position:fixed;
-  top:0.6rem;
-=======
 
 .home .search{
    width:100%;
    height:0.64rem;
-   background:#fff; 
+   background:#fff;
    position:fixed;
     top:0.6rem;
 		/* left:0.4rem; */
 	margin-left:10px;
->>>>>>> shangshang
 	 z-index:200;
 }
 .search_c{
@@ -210,10 +126,10 @@ export default{
 
 	margin-left:30px;
 	line-height:0.56rem;
-	font-family: .PingFangSC-Regular;
+	font-family: PingFangSC-Regular;
 	font-size: 14px;
 	color: #5A5A5A;
-	
+
 }
 .search_l>img{
 	width:0.58rem;
@@ -225,14 +141,14 @@ export default{
 	/* background: #000066; */
 	display: flex;
 	flex-direction: column;
-	justify-content: center; */
+	justify-content: center;
 	align-items: center;
 	margin-right:0.5rem;
 }
 .search_r_xin img{
 	width:0.36rem;
 	height:0.36rem;
-	
+
 }
 .all{
 	width: 100%;
@@ -252,7 +168,7 @@ export default{
 #nav{
 	width:100%;
 	height:0.72rem;
-	 background: #fff; 
+	 background: #fff;
 	position:fixed;
   top:1.68rem;
 	line-height: 0.6rem;
@@ -270,18 +186,10 @@ export default{
 }
 #nav>.list>li{
    /* float:left; */
-<<<<<<< HEAD
-	font-size:16px;
-	text-align:center;
-	/* background: red; */
-	margin-left:10px;
-   margin-right:14px;
-=======
     width: 20%;
 	font-size:16px;
 	text-align:center;
     /* background: orangered; */
->>>>>>> shangshang
 }
 ::-webkit-scrollbar {
 display: none;/*隐藏滚轮*/
@@ -291,12 +199,9 @@ display: none;/*隐藏滚轮*/
 	color:#555555;
 	border-bottom:2px solid black;
 }
-<<<<<<< HEAD
-=======
 #nav>.list>.youhui{
 	/* margin-left:8px; */
 	width:2.8rem;
-	
+
 }
->>>>>>> shangshang
 </style>

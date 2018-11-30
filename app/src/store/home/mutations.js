@@ -3,13 +3,9 @@ export default{
 		state.banner=params;
 		// console.log(state.banner)
 	},
-<<<<<<< HEAD
-	handleCloth(state,params){
-		state.goodslist=[...state.goodslist,...params];
-=======
 	handleGoodsFlagToggle(state){
 		state.goodslist = [];
-	
+
 	},
 	handleGoodsFlagToggle1(state){
 		state.sp = [];
@@ -27,14 +23,13 @@ export default{
 		state.sptu=[];
 	},
 	handleCloth(state,params){
-			
+
 			state.goodslist=[...state.goodslist,...params];
-		
-		
->>>>>>> shangshang
+
+
 	},
 	handleId(state,params){
-	
+
 	},
 	handleTehui(state,params){
 		// console.log(state.sp);
@@ -52,43 +47,28 @@ export default{
 		// console.log(state.sp);
 	},
 	handleTehui3(state,params){
-<<<<<<< HEAD
-		 console.log(state.sp);
-=======
 		 // console.log(state.sp);
->>>>>>> shangshang
 		state.sp3=[...state.sp3,...params];
-	
+
 	},
 	handleSmall(state,params){
 		state.xiaotu=[...params];
 	},
 	handleTwopicture(state,params){
-<<<<<<< HEAD
-		state.sptu=[...state.sptu,...params];
-		
-	},
-=======
 
 		state.sptu=[...state.sptu,...params];
-		
+
 	},
 // 	handleRoute(state){
 // 		state.sptu=[...state.sptu,...params];
-// 		
+//
 // 	},
->>>>>>> shangshang
    handleBottom(state,params){
 	   state.showBottom =params;
    },
    clearArray(state){
 	   state.sp=[]
    },
-<<<<<<< HEAD
-//    clearPagenum(state){
-// 	   state.pageNum=1;
-//    }
-=======
 	 clearArray1(state){
 	 	state.sp1=[]
 	 },
@@ -105,5 +85,4 @@ export default{
 		 console.log(params);
 		 state.sousuo = params;
   }
->>>>>>> shangshang
 }

@@ -9,22 +9,22 @@
 		<!-- 导航 -->
 		<div class="navv">
 			<ul>
-			   <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index)">
+			   <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index)" :key="index">
 				   {{item.title}}
 			   </li>
 			</ul>
 		</div>
 		<div class="goodfind">
-			<div class="wrapper" ref="Wrapper"> 
-			<div class="content"> 
-			<div v-for="(item,index) in sousuo" class="god">
+			<div class="wrapper" ref="Wrapper">
+			<div class="content">
+			<div v-for="(item,index) in sousuo" class="god" :key="index">
 				<img :src="item.picture">
 				<p>{{item.name}}</p>
 				<p>{{item.price}}</p>
 			</div>
 			</div>
-			 </div> 
-		 </div> 
+			 </div>
+		 </div>
 	</div>
 </template>
 <script>
@@ -52,10 +52,10 @@
 					name:"boy",
 					title:"男装 " ,
 					},
-				
+
 				],
 				activeIndex:0
-				
+
 			}
 		},
 		computed: {
@@ -68,7 +68,7 @@
 				this.$router.push({name:"search"})
 			},
 			...Vuex.mapActions({
-				handleFind:"home/handleFind" 
+				handleFind:"home/handleFind"
 			}),
 			handleClick(index){
 				this.activeIndex=index;
@@ -79,13 +79,13 @@
 				click: true,
 				// tap: true,
 				pullUpLoad: true,
-				
+
 			});
-			
+
 			this.scroll.on("pullingUp", () => {
-				this.handleFind({val:this.val,pageNum:++this.pageNum});	
+				this.handleFind({val:this.val,pageNum:++this.pageNum});
 			})
-			
+
 		},
 		updated () {
 			//重新计算高度
@@ -126,7 +126,7 @@
 		/* display: flex; */
 		width:45%;
 		/* height:100%; */
-	} 
+	}
 
 	.goodfind .god  img {
 		width: 100%;
@@ -145,7 +145,7 @@
 		width:5.5rem;
 		height:0.56rem;
 		line-height:0.56rem;
-		
+
 	}
    .result .navv{
 	  position:fixed;

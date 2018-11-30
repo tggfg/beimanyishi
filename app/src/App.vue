@@ -1,6 +1,6 @@
 <template>
   <div id="app">
- 
+
     <router-view/>
 		<footer-com ></footer-com>
   </div>
@@ -23,11 +23,7 @@ export default {
 
 <style>
 #app{
-<<<<<<< HEAD
-	width: 100%;
-=======
 	width:100%;
->>>>>>> shangshang
 	height:100%;
 }
 </style>

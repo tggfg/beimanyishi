@@ -1,29 +1,15 @@
 <template>
-<<<<<<< HEAD
-<div>
-	dgdgrttr
-</div>	
-
-</template>
-<script>
-import Vuex from "vuex";
-export default{
- data(){
-	return{
-	
-=======
 <div class="sear">
 	<div class="sch">
 	<p @click="handleSearch()"><img src="../../../static/img/images/left.png"></p>
 	<p><input type="text" placeholder="请输入搜索关键字"  v-model="val" @input="handleFind({val,pageNum})" @keydown.enter="handleEnter()"></p>
 	<p>消息</p>
 	</div>
-	<!-- 热门 -->
 	<div class="hot">热门搜索</div>
 	<div class="title">
     <p>亲子装</p>
 	  <p>印花T桖</p>
-	  <p>新尺码XXL</p>  
+	  <p>新尺码XXL</p>
 	  <p>儿童装</p>
 	  <p>情侣装</p>
 	  <p>本周排行</p>
@@ -41,46 +27,33 @@ export default{
 	return{
 	  val:"女装",
 		pageNum:1
->>>>>>> shangshang
 	}
  },
  computed:{
 	...Vuex.mapState({
 		showBottom:state=>state.home.showBottom,
-<<<<<<< HEAD
+
 	}),
-	
-},
-methods:{
-	...Vuex.mapMutations({
-		// handleBottom:"handleBottom",
-	})
-=======
-		
-	}),
-	
-	
+
+
 },
 methods:{
 	...Vuex.mapActions({
-		handleFind:"home/handleFind" 
+		handleFind:"home/handleFind"
 	}),
 	handleSearch(){
-	
-	this.$router.push("/home/index");	
-		
+
+	this.$router.push("/home/index");
+
 	},
 	handleEnter(){
   	this.$router.push({name:"find",query:{val:this.val,pageNum:this.pageNum}});
 
 	}
->>>>>>> shangshang
 }
 }
 </script>
 <style>
-<<<<<<< HEAD
-=======
 .sear{
 	width:100%;
     height:100%;
@@ -88,7 +61,7 @@ methods:{
 	z-index:1000;
 	background: #fff;
 	padding-top: 0.4rem;
-	
+
 }
 .sear p:nth-child(1) img{
 	width:0.2rem;
@@ -105,7 +78,7 @@ methods:{
 	outline:none;
 	border:0;
 	padding-left:20px;
-} 
+}
 .sear .sch p:nth-child(3){
 	font-size:16px;
 }
@@ -114,7 +87,7 @@ methods:{
 	width:100%;
 	height:0.88rem;
     line-height:0.88rem;
-	
+
 	/* background:red; */
 	padding:0 17px;
 	padding-bottom:1rem;
@@ -140,7 +113,7 @@ methods:{
 	font-size:14px;
 	display:flex;
 	flex-wrap:wrap;
-	align-item:flex-end;
+	align-items:flex-end;
 	justify-content:space-between;
 	margin-top:27px;
 }
@@ -153,7 +126,6 @@ methods:{
      border-radius: 6px;
 	 text-align:center;
 	 /* margin-right:32px; */
-	
+
 }
->>>>>>> shangshang
 </style>

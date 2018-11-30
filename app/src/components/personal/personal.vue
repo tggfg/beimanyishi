@@ -3,7 +3,7 @@
 		<top-com></top-com>
 		<order-com></order-com>
 		<services-com></services-com>
-	
+
 	</div>
 </template>
 <script>
@@ -26,6 +26,6 @@ export default {
 .clothes{
 	height: 100%;
 	width: 100%;
-	
+
 }
 </style>
