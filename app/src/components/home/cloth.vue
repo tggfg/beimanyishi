@@ -30,12 +30,11 @@
 			<!-- 商品列表 -->
 			<div class="fz">
 			  <ul class="fuzhuang">
-			    <li v-for="(item,index) in sptu" :key="index">
+			    <li v-for="(item,index) in sptu" :key="index" @click="handleCloth(item.id)">
 				  <img :src="item.picture">
 				  <p class="js">{{item.name}}</p>
 				  <p class="jieshao">
 				  <span>${{item.price}}</span>
-				  <!-- <span class="old">${{item.oldprice}}</span> -->
 				  </p>
 				</li>
 			  </ul>
@@ -88,6 +87,10 @@
 				let typeId_2 = this.small[index].parentId;
 				let typeId_3 = id;
 				this.$router.push({name:"listdetail",query:{level1:typeId_1,level2:typeId_2,level3:typeId_3,index:index}})
+			},
+			handleCloth(id){
+				 // 给购物车传商品id
+        		// this.$rouer.push({name:"",query:{goodId:id}});
 			}
 
 		},

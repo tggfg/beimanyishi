@@ -19,7 +19,7 @@ const actions={
         }).then((data)=>{
             pic=data.data.data.data;
             commit("handlePic",pic);
-            // console.log(pic)
+            console.log(pic)
             })
         }else if(params.id1){
             axios({
@@ -27,6 +27,7 @@ const actions={
                 url:"/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&pageNum=1",
             }).then((data)=>{
                 pic=data.data.data.data;
+                console.log(pic)
                 commit("handlePic",pic);
                 })
                 
