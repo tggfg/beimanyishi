@@ -7,15 +7,15 @@
 		</p>
 		<div class="smalltu">
 			<ul>
-				<li v-for="(item,index) in small"  :key="index">
+				<li v-for="(item,index) in small"  :key="index" @click="handleSm(item.id,index)">
 					<img :src="item.picture">
 					<p>{{item.name}}</p>
 				</li>
-				<li class="both">
+				<li class="both" @click="handleTotle()"> 
 					<img src="../../../static/icon/fanhui2@2x.png">
 					<p>全部商品</p>
 				</li>
-				<li class="both">
+				<li class="both" @click="handleClassify()">
 					<img src="../../../static/icon/fenlei@2x.png">
 					<p>更多分类</p>
 				</li>
@@ -76,7 +76,19 @@
 			}),
 			...Vuex.mapMutations({
 				handleRemove:"home/handleRemove"
-			})
+			}),
+			handleTotle(){
+				this.$router.push({name:"total",query:{idOne:this.id,index:this.index}})
+			},
+			handleClassify(){
+				this.$router.push({name:"classify",query:{val:this.id,index:this.index}})
+			},
+			handleSm(id,index){
+				let typeId_1 = this.id;
+				let typeId_2 = this.small[index].parentId;
+				let typeId_3 = id;
+				this.$router.push({name:"listdetail",query:{level1:typeId_1,level2:typeId_2,level3:typeId_3,index:index}})
+			}
 
 		},
 		created() {
@@ -88,11 +100,20 @@
 			}).then((data)=>{
 				this.data=data.data.data;
 				// console.log(data.data);
+				let id2=2001;
+				switch(this.id){
+						case 1001:id2=2001;break;
+						case 1002:id2=2002;break;
+						case 1003:id2=2003;break;
+						case 1004:id2=2004;break;
+						case 1005:id2=2005;break;
+					}
 				data.data.data.map((item)=>{
 					if(item.level==1){
 						this.navs.push(item);
 					}
-					if(item.level==3&&item.parentId==2001){
+					
+					if(item.level==3&&item.parentId==id2){
 						if(this.small.length<8){
 							this.small.push(item);
 						}

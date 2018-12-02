@@ -1,6 +1,6 @@
 <template>
 	<div class="classify">
-		<div class="search">
+		<div class="search" @click="handlesearch()">
 			<div class="sear">
 				输入关键字
 			</div>
@@ -18,18 +18,7 @@
 import axios from "axios";
 import Vuex from "vuex";
 export default{
-	created(){
-		axios({
-			method: "get",
-			url: "http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType",
-		}).then((data) => {
-			// console.log(data.data.data);
-			data.data.data.map((item)=>{
-				if(item.level==1){
-					this.navs.push(item);
-				}
-			})
-		})
+	created(){		
 		// axios({
 		// 	methods:"get",
 		// 	url:"http://localhost:3000/list"
@@ -39,11 +28,31 @@ export default{
 		// 			this.navs.push(item);
 		// 		}
 		// 	})
-		// })
-		this.$router.push({name:"nav",query:{val:1001,index:0}})
+		// })	
+		// 
+		// 
+		if(this.$route.query.val){
+			console.log(this.$route.query);
+			this.id=this.$route.query.val;
+			this.curIndex = this.$route.query.index;
+		}	
+			this.$router.push({name:"nav",query:{val:this.id,index:this.curIndex}});		
+		axios({
+			method: "get",
+			url: "/bmys/goods/getAllGoodsType",
+		}).then((data) => {
+			data.data.data.map((item)=>{
+				if(item.level==1){
+					this.navs.push(item);
+				}
+			})
+		
+			
+		})
 	},
 	data(){
 		return{
+			id:1001,
 			navs:[],
 			curIndex:0,
 		}
@@ -52,6 +61,9 @@ export default{
 		handleId(id,index){
 			this.curIndex=index;
 			this.$router.push({name:"nav",query:{val:id,index:index}});
+		},
+		handlesearch(){
+			this.$router.push("/search");
 		}
 	}
 }

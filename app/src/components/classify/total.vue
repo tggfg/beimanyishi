@@ -1,9 +1,9 @@
 <template>
     <div class="total">
         <div class="toper">
-           <router-link :to="{name:'classify'}"> 
+           <div class="goback" @click="handleGoBack()"> 
                <img src="../../../static/listimg/left.png"/>
-            </router-link>
+            </div>
             <span>全部商品</span>
         </div>
         <ul class="nav">
@@ -24,7 +24,7 @@ created(){
     this.curIndex=this.$route.query.index;//一级菜单的下标
     axios({
 			methods:"get",
-			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
+			url:"/bmys/goods/getAllGoodsType"
 		}).then((data)=>{
              data.data.data.map((item)=>{
                 if(item.level==1){
@@ -45,6 +45,9 @@ methods:{
     handleId(index,id){
         this.curIndex = index;
         this.$router.push({name:"totalcloth",query:{id:id}})
+    },
+    handleGoBack(){
+        this.$router.push("/classify")
     }
 }
 
@@ -94,5 +97,12 @@ methods:{
 .total>.nav>.active{
     border-bottom: 1px solid #000;
 	color: #1c1c1c;
+}
+.goback{
+    width:.4rem;
+    height:.4rem;
+}
+.goback>img{
+    width:100%;
 }
 </style>

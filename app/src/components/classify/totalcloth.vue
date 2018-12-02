@@ -67,10 +67,10 @@ export default {
     ...Vuex.mapActions({
         handlePic:"classify/handlePic",
         handleRoute:"classify/handleRoute"
-    })
-},
-handleCloth(){
-
+    }),
+    handleCloth(){
+    alert(1)
+}
 }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-<div>ss
+<div>
 <div class="idx">
 	<goodslist-com></goodslist-com>
 </div>

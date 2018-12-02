@@ -32,7 +32,7 @@ export default {
         this.index1=this.$route.query.index;
         axios({
 			methods:"get",
-			url:"http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType"
+			url:"/bmys/goods/getAllGoodsType"
 		}).then((data)=>{
             this.data=data.data.data;
              this.data.map((item)=>{
@@ -92,7 +92,7 @@ export default {
    beforeRouteUpdate(to,from,next){
       this.parentId=to.query.val;
       this.index1=to.query.index;
-      //三级菜单初始化，需后期修改
+      //三级菜单初始化，
       switch(this.parentId){
             case 1001: this.parentId2=2001;break;
             case 1002:this.parentId2=2002;break;
@@ -157,7 +157,6 @@ export default {
     height: .65rem;
     line-height: .65rem;
     padding: 0 .12rem;
-    /* margin: 0 15px; */
     font-family: PingFangSC-Medium;
 }
 .women>.womem_left>ul>.active{
@@ -185,7 +184,6 @@ export default {
      justify-content: space-between; 
 }
 .women_right>.xia>.small{
-    /* float: left; */
     width: 1.1rem;
     height: 1.1rem;
     display: flex;

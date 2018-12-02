@@ -1,12 +1,12 @@
 <template>
-<div class="sear">
+<div class="se">
 	<div class="sch">
 	<p @click="handleSearch()"><img src="../../../static/img/images/left.png"></p>
 	<p><input type="text" placeholder="请输入搜索关键字"  v-model="val" @input="handleFind({val,pageNum})" @keydown.enter="handleEnter()"></p>
 	<p>消息</p>
 	</div>
 	<div class="hot">热门搜索</div>
-	<div class="title">
+	<div class="tit">
     <p>亲子装</p>
 	  <p>印花T桖</p>
 	  <p>新尺码XXL</p>
@@ -54,7 +54,7 @@ methods:{
 }
 </script>
 <style>
-.sear{
+.se{
 	width:100%;
     height:100%;
 	position:fixed;
@@ -63,12 +63,12 @@ methods:{
 	padding-top: 0.4rem;
 
 }
-.sear p:nth-child(1) img{
+.se p:nth-child(1) img{
 	width:0.2rem;
 	height:0.4rem;
 	margin-top:0.24rem;
 }
-.sear p:nth-child(2) input{
+.se p:nth-child(2) input{
 	width:5.5rem;
 	height:0.56rem;
 	background:blue;
@@ -79,7 +79,7 @@ methods:{
 	border:0;
 	padding-left:20px;
 }
-.sear .sch p:nth-child(3){
+.se .sch p:nth-child(3){
 	font-size:16px;
 }
 .sch{
@@ -104,7 +104,7 @@ methods:{
 	color:#ccc;
 	border-top:1px solid gray;
 }
-.title{
+.tit{
 	width:70%;
 	height:3rem;
     margin-left:40px;
@@ -117,7 +117,7 @@ methods:{
 	justify-content:space-between;
 	margin-top:27px;
 }
-.title p{
+.tit p{
 	width:1.4rem;
 	height:0.5rem;
 	line-height:0.5rem;

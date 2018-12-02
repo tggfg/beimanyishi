@@ -15,7 +15,7 @@ const actions={
         if(params.id1&&params.id2&&params.id3){
         axios({
 			methods:"get",
-			url:"http://www.bmyss.xyz:8080/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&typeId_1="+params.id2+"&typeId_3="+params.id3+"&pageNum="+params.pageNum,
+			url:"/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&typeId_1="+params.id2+"&typeId_3="+params.id3+"&pageNum="+params.pageNum,
         }).then((data)=>{
             pic=data.data.data.data;
             commit("handlePic",pic);
@@ -24,7 +24,7 @@ const actions={
         }else if(params.id1){
             axios({
                 methods:"get",
-                url:"http://www.bmyss.xyz:8080/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&pageNum=1",
+                url:"/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&pageNum=1",
             }).then((data)=>{
                 pic=data.data.data.data;
                 commit("handlePic",pic);
@@ -39,7 +39,7 @@ const actions={
         if(params.id1&&params.id2&&params.id3){
         axios({
 			methods:"get",
-			url:"http://www.bmyss.xyz:8080/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&typeId_1="+params.id2+"&typeId_3="+params.id3+"&pageNum="+params.pageNum,
+			url:"/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&typeId_1="+params.id2+"&typeId_3="+params.id3+"&pageNum="+params.pageNum,
         }).then((data)=>{
             pic=data.data.data.data;
             commit("handlePic",pic);
@@ -48,7 +48,7 @@ const actions={
         }else if(params.id1){
             axios({
                 methods:"get",
-                url:"http://www.bmyss.xyz:8080/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&pageNum=1",
+                url:"/bmys/goods/findGoodsByTypeId?typeId_1="+params.id1+"&pageNum=1",
             }).then((data)=>{
                 pic=data.data.data.data;
                 commit("handlePic",pic);
