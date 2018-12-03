@@ -33,7 +33,7 @@ export default {
       verification: "",
       lock: true,
       second: 60
-    };
+    }
   },
   methods: {
     getVerificationHandle() {
@@ -124,22 +124,26 @@ export default {
         return;
       }
       axios
-        .post("/bmys/check/checkcode", {
-          code: this.verification,
-          mobile: this.phone
+        .get("/bmys/check/checkcode", {
+          params:{
+            code: this.verification,
+            mobile: this.phone
+          }
         })
         .then(function(response) {
           console.log(response);
           return response.data;
         })
         .then(data => {
-          if (data.code == 1) {
+          if (data.code == 1004) {
             console.log("1");
             axios
-              .post("/bmys/user/reg", {
-                mobile: this.phone,
-                password: this.password,
-                repassword: this.rePassword
+              .get("/bmys/user/reg", {
+                params:{
+                  mobile: this.phone,
+                  password: this.password,
+                  repassword: this.rePassword
+                }
               }) // 里面写登录的接口名
               .then(function(response) {
                 return response.data;

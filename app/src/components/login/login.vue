@@ -48,12 +48,14 @@ export default {
                     return  
                 }
             }
-            axios.post('/bmys/user/login', {
-                mobile: this.phone,
-                password: this.password
+            axios.get('/bmys/user/login', {
+                params:{
+                    mobile: this.phone,
+                    password: this.password
+                }
             })
             .then((response) => {
-                if (response.data.code === '1002') { // 假设后端给了登录成功的信息
+                if (response.data.code === 1002) { // 假设后端给了登录成功的信息
                     this.$router.push('/home') // 跳转到home页
                 }else{
                     alert("账号密码错误")

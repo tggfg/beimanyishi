@@ -24,8 +24,21 @@
 </template>
 <script>
 export default {
-    
+    data(){
+        return {
+            phone: "",
+            password: "",
+            rePassword: "",
+            verification: "",
+            lock: true,
+            second: 60
+        }
+    },
+    methods:{
+        
+    }
 }
+    
 </script>
 <style scoped>
 .forgetpasword{
