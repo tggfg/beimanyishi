@@ -1,0 +1,213 @@
+{
+  "goods": [
+    {
+      "id": 0,
+      "goodsMaxSrc": "static/img/goodsContent_03.jpg",
+      "goodsMinSrc": "static/img/goodsAdd_03.jpg",
+      "goodsName": "宽松衬衫-男",
+      "goodsPrice": 119,
+      "goodsColor": [
+        {
+          "color": "#FF0000",
+          "colorName": "红色"
+        },
+        {
+          "color": "#FFA500",
+          "colorName": "橙色"
+        },
+        {
+          "color": "#0000FF",
+          "colorName": "蓝色"
+        },
+        {
+          "color": "#008000",
+          "colorName": "绿色"
+        }
+      ],
+      "goodsSize": [
+        "165/S",
+        "170/M",
+        "175/L",
+        "180/XL"
+      ]
+    },
+    {
+      "id": 1,
+      "goodsMaxSrc": "static/img/goodsContent_03.jpg",
+      "goodsMinSrc": "static/img/goodsAdd_05.jpg",
+      "goodsName": "法兰绒立领衬衫-男",
+      "goodsPrice": 89,
+      "goodsColor": [
+        {
+          "color": "#FF0000",
+          "colorName": "红色"
+        },
+        {
+          "color": "#FFA500",
+          "colorName": "橙色"
+        },
+        {
+          "color": "#0000FF",
+          "colorName": "蓝色"
+        },
+        {
+          "color": "#008000",
+          "colorName": "绿色"
+        }
+      ],
+      "goodsSize": [
+        "165/S",
+        "170/M",
+        "175/L",
+        "180/XL"
+      ]
+    },
+    {
+      "id": 2,
+      "goodsMaxSrc": "static/img/goodsContent_03.jpg",
+      "goodsMinSrc": "static/img/goodsAdd_07.jpg",
+      "goodsName": "拉绒连帽上衣-男",
+      "goodsPrice": 119,
+      "goodsColor": [
+        {
+          "color": "#FF0000",
+          "colorName": "红色"
+        },
+        {
+          "color": "#FFA500",
+          "colorName": "橙色"
+        },
+        {
+          "color": "#0000FF",
+          "colorName": "蓝色"
+        },
+        {
+          "color": "#008000",
+          "colorName": "绿色"
+        }
+      ],
+      "goodsSize": [
+        "165/S",
+        "170/M",
+        "175/L",
+        "180/XL"
+      ]
+    }
+  ],
+  "goodsComments": [
+    {
+      "id": 0,
+      "goodsId": 0,
+      "picture": "static/img/goodsAdd_03.jpg",
+      "orderNum": 3562,
+      "content": "不错，很合身",
+      "color": "白色",
+      "size": "170/M",
+      "time": "2018-6-13 19: 06"
+    },
+    {
+      "id": 1,
+      "goodsId": 0,
+      "picture": "static/img/goodsAdd_03.jpg",
+      "orderNum": 1985,
+      "content": "版型很好，穿着很帅",
+      "color": "白色",
+      "size": "170/M",
+      "time": "2018-7-24 13: 55"
+    },
+    {
+      "id": 2,
+      "goodsId": 0,
+      "picture": "static/img/goodsAdd_03.jpg",
+      "orderNum": 1985,
+      "content": "衣服材质很好",
+      "color": "白色",
+      "size": "170/M",
+      "time": "2018-7-16 15: 30"
+    },
+    {
+      "id": 3,
+      "goodsId": 1,
+      "picture": "static/img/goodsAdd_05.jpg",
+      "orderNum": 3562,
+      "content": "不错，很合身",
+      "color": "暗红",
+      "size": "170/M",
+      "time": "2018-6-13 19: 06"
+    },
+    {
+      "id": 4,
+      "goodsId": 1,
+      "picture": "static/img/goodsAdd_05.jpg",
+      "orderNum": 1985,
+      "content": "版型很好，穿着很帅",
+      "color": "暗红",
+      "size": "170/M",
+      "time": "2018-7-24 13: 55"
+    },
+    {
+      "id": 5,
+      "goodsId": 1,
+      "picture": "static/img/goodsAdd_05.jpg",
+      "orderNum": 1985,
+      "content": "衣服材质很好",
+      "color": "暗红",
+      "size": "170/M",
+      "time": "2018-7-16 15: 30"
+    },
+    {
+      "id": 6,
+      "goodsId": 2,
+      "picture": "static/img/goodsAdd_07.jpg",
+      "orderNum": 3562,
+      "content": "不错，很合身",
+      "color": "深蓝绿",
+      "size": "170/M",
+      "time": "2018-6-13 19: 06"
+    },
+    {
+      "id": 7,
+      "goodsId": 2,
+      "picture": "static/img/goodsAdd_07.jpg",
+      "orderNum": 1985,
+      "content": "版型很好，穿着很帅",
+      "color": "深蓝绿",
+      "size": "170/M",
+      "time": "2018-7-24 13: 55"
+    },
+    {
+      "id": 8,
+      "goodsId": 2,
+      "picture": "static/img/goodsAdd_07.jpg",
+      "orderNum": 1985,
+      "content": "衣服材质很好",
+      "color": "深蓝绿",
+      "size": "170/M",
+      "time": "2018-7-16 15: 30"
+    }
+  ],
+  "products": [
+    {
+      "0": {
+        "src": "static/img/goodsAdd_03.jpg",
+        "name": "宽松衬衫-男",
+        "price": 119,
+        "color": "橙色",
+        "size": "170/M",
+        "num": 7
+      },
+      "id": 1
+    },
+    {
+      "0": {
+        "src": "static/img/goodsAdd_03.jpg",
+        "name": "宽松衬衫-男",
+        "price": 119,
+        "color": "橙色",
+        "size": "170/M",
+        "num": 5
+      },
+      "id": 2
+    }
+  ]
+}

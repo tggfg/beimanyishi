@@ -4,7 +4,10 @@ import home from "../components/home/home.vue"
 import classify  from "../components/classify/classify.vue"
 import clothes  from "../components/clothes/clothes.vue"
 import personal  from "../components/personal/personal.vue"
-import shopping  from "../components/shopping/shopping.vue"
+import cart  from "../components/shopping/cart/cart.vue"
+import emptyCart from '@/components/shopping/cart/emptyCart.vue'
+import goodsDetails from '@/components/shopping/goodsDetails/goodsDetails.vue'
+import pay from '@/components/shopping/pay/pay.vue'
 
 Vue.use(Router)
 
@@ -35,9 +38,24 @@ export default new Router({
 	 component:personal
 	 },
 	 {
-	 path:"/shopping",
-	 name:"shopping",
-	 component:shopping
+	 path:"/cart",
+	 name:"cart",
+	 component:cart
+	 },
+	 {
+		path: '/emptyCart',
+		name: 'emptyCart',
+		component: emptyCart
+	 },
+	 {
+		path: '/goodsDetails',
+		name: 'goodsDetails',
+		component: goodsDetails
+	 },
+	 {
+		path: '/pay',
+		name: 'pay',
+		component: pay
 	 }
   ]
 })

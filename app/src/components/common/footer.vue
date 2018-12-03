@@ -1,5 +1,5 @@
 <template>
-<div class="footer">
+<div class="footer" v-show="flag">
 <ul>
 	 <li v-for="(item,index) in navs">
 		
@@ -10,7 +10,13 @@
 </div>
 </template>
 <script>
+import Vuex from 'vuex'
 export default{
+	computed: {
+		...Vuex.mapState({
+			flag: state => state.flag
+		})
+	},
 	data(){
 		return{
 			navs:[
@@ -31,7 +37,7 @@ export default{
 				},
 				{
 				  iname:"icon-ziyuan",
-					name:"shopping",
+					name:"emptyCart",
 					title:"购物车"
 				},
 				{
