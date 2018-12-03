@@ -11,7 +11,7 @@
 		<span>输入关键字</span>
 		</div>
 		<p class="search_r">
-		<div class="search_r_xin">
+		<div class="search_r_xin" @click="handleMessage()">
 		<img src="../../../static/icon/xiaoxi@2x.png">
 		<span>消息</span>
 		</div>
@@ -67,6 +67,9 @@ export default{
 				 },
 				 handlxian(){
 					 this.$router.push({name:"discount"})
+				 },
+				 handleMessage(){
+					 this.$router.push("/message")
 				 }
 
 

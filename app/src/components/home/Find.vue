@@ -3,13 +3,13 @@
 	<div class="result">
 		<div class="sch">
 			<p @click="handleSearch()"><img src="../../../static/img/images/left.png"></p>
-			<p><input type="text" placeholder="请输入搜索关键字" v-model="val" @input="handleFind(val,pageNum)" @keydown.enter="handleEnter()"></p>
+			<p><input type="text"  :value="val" @click="handleTiao()"></p>
 			<p>消息</p>
 		</div>
 		<!-- 导航 -->
 		<div class="navv">
 			<ul>
-			   <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index)" :key="index">
+			   <li v-for="(item,index) in navs" :class="activeIndex==index?'active':''" @click="handleClick(index,item.title)" :key="index">
 				   {{item.title}}
 			   </li>
 			</ul>
@@ -38,7 +38,6 @@
 			}
 			this.pageNum= this.$route.query.pageNum;
 		},
-
 		data(){
 			return{
 				// pageNum:1,
@@ -70,8 +69,15 @@
 			...Vuex.mapActions({
 				handleFind:"home/handleFind"
 			}),
-			handleClick(index){
+			handleClick(index,title){
 				this.activeIndex=index;
+				this.val=title.slice(0,1)
+				this.handleFind({val:this.val,pageNum:1});
+
+			},
+			handleTiao(){
+				this.$router.push("/search");
+				
 			}
 		},
 		mounted() {
@@ -149,7 +155,12 @@
     outline: none;
     border:1px solid #ccc;
 		line-height:0.56rem;
-
+		background: #F4F4F4 url("../../../static/icon/sousuo@2x.png") no-repeat 0.1rem 0.12rem;
+		background-size:0.24rem 0.24rem;
+		border-radius: 6px;
+		outline:none;
+		border:0;
+		padding-left:20px;
 	}
    .result .navv{
 	  position:fixed;

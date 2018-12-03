@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper" ref="wrapper">
     <div class="cloth  content" >
-        <div v-for="(item,index) in pic" class="pic" @click="handleCloth()">
+        <div v-for="(item,index) in pic" class="pic" @click="handleCloth(item.id)">
            <a href="##">
                <img :src="item.picture" alt="">
            </a>
@@ -48,7 +48,7 @@ export default {
             pullUpLoad:true
         });
         this.scroll.on("pullingUp",()=>{
-            // alert(1)
+            
         this.handlePic({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:++this.pageNum})
         })
     },
@@ -60,8 +60,9 @@ export default {
         next();
     },
     methods:{
-        handleCloth(){
-            alert(1);
+        handleCloth(id){
+            // 给购物车传商品id
+            // this.$rouer.push({name:"",query:{goodId:id}});
         },
         ...Vuex.mapActions({
             handlePic:"classify/handlePic",

@@ -73,7 +73,7 @@ export default {
     height: 100%;
     background: #fff;
     /* margin-top: .4rem; */
-    margin-top:.4rem;
+    margin-top:.6rem;
     /* padding-left:.15rem; */
     font-family: PingFangSC-Regular;
 }
@@ -88,7 +88,7 @@ export default {
     font-size:14px;
 }
 .msg>.cont{
-    margin-top: 20px;
+    margin-top: 40px;
     width: 100%;
     height: 100%;
     /* background: green; */

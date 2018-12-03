@@ -29,6 +29,7 @@ import tehui1 from "../components/home/tehui/tehui1.vue"
 import tehui2 from "../components/home/tehui/tehui2.vue"
 import tehui3 from "../components/home/tehui/tehui3.vue"
 import search from "../components/home/search.vue";
+import find from "../components/home/find.vue";
 import message from "../components/home/message.vue";
 import find from "../components/home/Find.vue";
 
@@ -100,28 +101,28 @@ export default new Router({
 	  path:"/discount",
 	  name:"discount",
 	  component:discount,
-    children:[
-      {
-      path:"tehui/:index",
-      name:"tehui",
-      component:tehui,
-      },
-     {
-     path:"tehui1/:index",
-     name:"tehui1",
-     component:tehui1,
-     },
-     {
-     path:"tehui2/:index",
-     name:"tehui2",
-     component:tehui2,
-     },
-     {
-     path:"tehui3/:index",
-     name:"tehui3",
-     component:tehui3,
-     },
-        ]
+	  children:[
+		  {
+		  path:"tehui/:index",
+		  name:"tehui",
+		  component:tehui,
+		  },
+		 {
+		 path:"tehui1/:index",
+		 name:"tehui1",
+		 component:tehui1,
+		 },
+		 {
+		 path:"tehui2/:index",
+		 name:"tehui2",
+		 component:tehui2,
+		 },
+		 {
+		 path:"tehui3/:index",
+		 name:"tehui3",
+		 component:tehui3,
+		 },
+			  ]
 	  },
 	  {
 		  path:"/message",
@@ -186,10 +187,15 @@ export default new Router({
 		component:search
 	 },
 	 {
-		path:"/Find",
+		path:"/search",
+		name:"search",
+		component:search
+	  },
+   {
+		path:"/find",
 		name:"find",
 		component:find
-	 }
+		},
   ]
 
 })

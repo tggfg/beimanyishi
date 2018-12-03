@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper" ref="wrapper">
         <div class="cloth  content" >
-            <div v-for="(item,index) in pic" class="pic" @click="handleCloth()" :key="index">
+            <div v-for="(item,index) in pic" class="pic" @click="handleCloth(item.id)">
            <a href="##">
                <img :src="item.picture" alt="">
            </a>
@@ -67,10 +67,11 @@ export default {
     ...Vuex.mapActions({
         handlePic:"classify/handlePic",
         handleRoute:"classify/handleRoute"
-    })
-},
-handleCloth(){
-
+    }),
+    handleCloth(){
+        // 给购物车传商品id
+        // this.$rouer.push({name:"",query:{goodId:id}});
+}
 }
 }
 </script>

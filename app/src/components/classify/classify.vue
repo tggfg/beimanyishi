@@ -1,6 +1,6 @@
 <template>
 	<div class="classify">
-		<div class="search">
+		<div class="search" @click="handlesearch()">
 			<div class="sear">
 				输入关键字
 			</div>
@@ -18,6 +18,7 @@
 import axios from "axios";
 import Vuex from "vuex";
 export default{
+<<<<<<< HEAD
 	created(){
 
 		axios({
@@ -31,6 +32,9 @@ export default{
 				}
 			})
 		})
+=======
+	created(){		
+>>>>>>> wangyanru
 		// axios({
 		// 	methods:"get",
 		// 	url:"http://localhost:3000/list"
@@ -40,6 +44,7 @@ export default{
 		// 			this.navs.push(item);
 		// 		}
 		// 	})
+<<<<<<< HEAD
     // })
     // console.log(this.$route.query);
 
@@ -61,6 +66,34 @@ export default{
 		return{
       navs:[],
       id:"",
+=======
+		// })	
+		// 
+		// 
+		if(this.$route.query.val){
+			console.log(this.$route.query);
+			this.id=this.$route.query.val;
+			this.curIndex = this.$route.query.index;
+		}	
+			this.$router.push({name:"nav",query:{val:this.id,index:this.curIndex}});		
+		axios({
+			method: "get",
+			url: "/bmys/goods/getAllGoodsType",
+		}).then((data) => {
+			data.data.data.map((item)=>{
+				if(item.level==1){
+					this.navs.push(item);
+				}
+			})
+		
+			
+		})
+	},
+	data(){
+		return{
+			id:1001,
+			navs:[],
+>>>>>>> wangyanru
 			curIndex:0,
 		}
 	},
@@ -68,6 +101,9 @@ export default{
 		handleId(id,index){
 			this.curIndex=index;
 			this.$router.push({name:"nav",query:{val:id,index:index}});
+		},
+		handlesearch(){
+			this.$router.push("/search");
 		}
 	}
 }
