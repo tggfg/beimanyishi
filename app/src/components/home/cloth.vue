@@ -11,11 +11,11 @@
 					<img :src="item.picture">
 					<p>{{item.name}}</p>
 				</li>
-				<li class="both">
+				<li class="both" @click="handleTotalClick()" >
 					<img src="../../../static/icon/fanhui2@2x.png">
 					<p>全部商品</p>
 				</li>
-				<li class="both">
+				<li class="both"  @click="handleAllClick()">
 					<img src="../../../static/icon/fenlei@2x.png">
 					<p>更多分类</p>
 				</li>
@@ -76,8 +76,14 @@
 			}),
 			...Vuex.mapMutations({
 				handleRemove:"home/handleRemove"
-			})
-
+      }),
+      handleAllClick(){
+        console.log(this.id);
+          this.$router.push({name:"classify",query:{val:this.id,index:this.index}});
+      },
+      handleTotalClick(){
+         this.$router.push({name:"totalcloth",query:{id:this.id}});
+      }
 		},
 		created() {
 			this.index=this.$route.query.index;

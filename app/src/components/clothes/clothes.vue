@@ -4,24 +4,27 @@
   <div class="clothe">
   <h2>穿搭</h2>
   </div>
-   <router-link to="">
+   <router-link to="discount">
      <div class="center-one">
       <p>无惧严寒，温暖时尚也有型</p>
       <img src="static/img/穿搭@2x_03.gif">
      </div>
   </router-link>
- <router-link to=''>
+
+ <router-link to='discount'>
   <div class="center-two">
       <p>无惧严寒，温暖时尚也有型</p>
       <img src="static/img/穿搭@2x_01_03.gif">
   </div>
   </router-link>
-<router-link to=''>
+
+<router-link to='discount'>
     <div class="center-three">
       <p>无惧严寒，温暖时尚也有型</p>
       <img src="static/img/穿搭@2x_22.gif">
     </div>
 </router-link>
+
 	</div>
 </template>
 

@@ -2,8 +2,9 @@
     <div class="title">
         <div class="title_top"></div>
         <div class="title_com">
-            <p>小户瑞</p>
-            <p>查看并编辑个人资料</p>
+             <router-link to="login">
+            <p>登录/注册</p>
+             </router-link>
             <img src="/static/img/赵老师.jpg" >
         </div>
     </div>
@@ -12,15 +13,15 @@
 <script>
 
 export default {
-    
-}   
+
+}
 </script>
 
 <style>
 .title{
     width: 100%;
     height:3.76rem;
-    background:#384355; 
+    background:#384355;
 }
 .title_top{
     height: .4rem;
@@ -31,21 +32,12 @@ export default {
     width:100%;
     position: relative;
 }
-.title_com>p:nth-child(1){
+.title_com>a{
     font-size: 18px;
     color: #FFF;
     position: absolute;
-    left:.16rem;
-    top:1.22rem;
-    font-weight:600;
-}
-.title_com>p:nth-child(2){
-    font-size: 14px;
-    color: #FFF;
-    opacity: 0.4;
-    position: absolute;
-    left:.16rem;
-    top:1.85rem;
+    left:1.16rem;
+    top:1.3rem;
     font-weight:600;
 }
 .title_com>img{

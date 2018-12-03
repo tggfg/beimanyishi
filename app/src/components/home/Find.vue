@@ -143,7 +143,11 @@
 	}
 	.result .sch input{
 		width:5.5rem;
-		height:0.56rem;
+    height:0.56rem;
+    background:#f4f4f4;
+    border-radius: 5px;
+    outline: none;
+    border:1px solid #ccc;
 		line-height:0.56rem;
 
 	}

@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper" ref="wrapper">
         <div class="cloth  content" >
-            <div v-for="(item,index) in pic" class="pic" @click="handleCloth()">
+            <div v-for="(item,index) in pic" class="pic" @click="handleCloth()" :key="index">
            <a href="##">
                <img :src="item.picture" alt="">
            </a>
@@ -25,8 +25,8 @@ export default {
             case 1003:this.handlePic({id1:1003,pageNum:1});break;
             case 1004:this.handlePic({id1:1004,pageNum:1});break;
             case 1005:this.handlePic({id1:1005,pageNum:1});break;
-        }  
-        this.handleRoute({id1:this.id,pageNum:1})     
+        }
+        this.handleRoute({id1:this.id,pageNum:1})
     },
     data(){
         return{
@@ -63,7 +63,7 @@ export default {
     handleId(index,id){
         this.curIndex=index;
         this.handlePic({id1:id})
-    },  
+    },
     ...Vuex.mapActions({
         handlePic:"classify/handlePic",
         handleRoute:"classify/handleRoute"
@@ -75,7 +75,7 @@ handleCloth(){
 }
 </script>
 <style scoped>
-.wrapper{ 
+.wrapper{
     position: absolute;
     z-index: 1;
     top:1.6rem;
@@ -83,7 +83,7 @@ handleCloth(){
     width:100%;
     overflow: hidden;
 }
-.cloth{ 
+.cloth{
     overflow: hidden;
 }
 .cloth>.pic{

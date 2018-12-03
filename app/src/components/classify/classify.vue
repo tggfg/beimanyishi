@@ -6,8 +6,8 @@
 			</div>
 		</div>
 		<ul class="nav">
-			<li v-for="(item,index) in navs" :class="curIndex==index?'active':''" 
-			@click="handleId(item.id,index)">
+			<li v-for="(item,index) in navs" :class="curIndex==index?'active':''"
+			@click="handleId(item.id,index)" :key="index">
 			{{item.name}}
 			</li>
 		</ul>
@@ -19,6 +19,7 @@ import axios from "axios";
 import Vuex from "vuex";
 export default{
 	created(){
+
 		axios({
 			method: "get",
 			url: "http://www.bmyss.xyz:8080/bmys/goods/getAllGoodsType",
@@ -39,12 +40,27 @@ export default{
 		// 			this.navs.push(item);
 		// 		}
 		// 	})
-		// })
-		this.$router.push({name:"nav",query:{val:1001,index:0}})
+    // })
+    // console.log(this.$route.query);
+
+  this.curIndex=this.$route.query.index;
+      this.id=this.$route.query.val;
+      console.log(this.$route.query.val)
+      if(this.$route.query){
+      this.$router.push({name:"nav",query:{val:this.id,index:this.curIndex}})
+}
+  this.$router.push({name:"nav",query:{val:1001,index:0}})
+
+
+      //
+
+
+
 	},
 	data(){
 		return{
-			navs:[],
+      navs:[],
+      id:"",
 			curIndex:0,
 		}
 	},
@@ -63,7 +79,7 @@ export default{
 }
 .classify>.search{
 	width:100%;
-	height:.56rem;	
+	height:.56rem;
 	margin-top:.4rem;
 }
 .classify>.search>.sear{
