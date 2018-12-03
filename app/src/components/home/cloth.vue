@@ -11,7 +11,7 @@
 					<img :src="item.picture">
 					<p>{{item.name}}</p>
 				</li>
-				<li class="both" @click="handleTotle()"> 
+				<li class="both" @click="handleTotle()">
 					<img src="../../../static/icon/fanhui2@2x.png">
 					<p>全部商品</p>
 				</li>
@@ -75,16 +75,6 @@
 			}),
 			...Vuex.mapMutations({
 				handleRemove:"home/handleRemove"
-<<<<<<< HEAD
-      }),
-      handleAllClick(){
-        console.log(this.id);
-          this.$router.push({name:"classify",query:{val:this.id,index:this.index}});
-      },
-      handleTotalClick(){
-         this.$router.push({name:"totalcloth",query:{id:this.id}});
-      }
-=======
 			}),
 			handleTotle(){
 				this.$router.push({name:"total",query:{idOne:this.id,index:this.index}})
@@ -103,7 +93,6 @@
         		// this.$rouer.push({name:"",query:{goodId:id}});
 			}
 
->>>>>>> wangyanru
 		},
 		created() {
 			this.index=this.$route.query.index;
@@ -126,7 +115,7 @@
 					if(item.level==1){
 						this.navs.push(item);
 					}
-					
+
 					if(item.level==3&&item.parentId==id2){
 						if(this.small.length<8){
 							this.small.push(item);

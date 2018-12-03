@@ -29,7 +29,6 @@ import tehui1 from "../components/home/tehui/tehui1.vue"
 import tehui2 from "../components/home/tehui/tehui2.vue"
 import tehui3 from "../components/home/tehui/tehui3.vue"
 import search from "../components/home/search.vue";
-import find from "../components/home/find.vue";
 import message from "../components/home/message.vue";
 import find from "../components/home/Find.vue";
 
