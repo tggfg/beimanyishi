@@ -90,7 +90,7 @@
 			},
 			handleCloth(id){
 				 // 给购物车传商品id
-        		// this.$rouer.push({name:"",query:{goodId:id}});
+        		this.$router.push({name:"goodsDetails",query:{goodId:id}});
 			}
 
 		},

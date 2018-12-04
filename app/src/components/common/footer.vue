@@ -34,7 +34,7 @@ export default{
 				},
 				{
 				  iname:"icon-ziyuan",
-					name:"shopping",
+					name:"emptyCart",
 					title:"购物车"
 				},
 				{

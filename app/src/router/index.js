@@ -4,7 +4,6 @@ import home from "../components/home/home.vue"
 import classify from "../components/classify/classify.vue"
 import clothes from "../components/clothes/clothes.vue"
 import personal from "../components/personal/personal.vue"
-import shopping from "../components/shopping/shopping.vue"
 import listdetail from "../components/classify/listdetail.vue";
 import listcloth from "../components/classify/listcloth.vue";
 import nav from "../components/classify/nav";
@@ -31,6 +30,13 @@ import tehui3 from "../components/home/tehui/tehui3.vue"
 import search from "../components/home/search.vue";
 import message from "../components/home/message.vue";
 import find from "../components/home/Find.vue";
+
+// jinqh
+import cart  from "../components/shopping/cart/cart.vue"
+import emptyCart from '@/components/shopping/cart/emptyCart.vue'
+import goodsDetails from '@/components/shopping/goodsDetails/goodsDetails.vue'
+import pay from '@/components/shopping/pay/pay.vue'
+import paySuccess from '@/components/shopping/pay/paySuccess.vue';
 
 Vue.use(Router)
 
@@ -169,12 +175,6 @@ export default new Router({
 	 name:"clothes",
 	 component:clothes
 	 },
-
-	 {
-	 path:"/shopping",
-	 name:"shopping",
-	 component:shopping
-   },
 {
 	 path:"/personal",
 	 name:"personal",
@@ -195,6 +195,31 @@ export default new Router({
 		name:"find",
 		component:find
 		},
+		{
+			path:"/cart",
+			name:"cart",
+			component:cart
+		},
+		{
+			path: '/emptyCart',
+			name: 'emptyCart',
+			component: emptyCart
+		},
+		{
+			path: '/goodsDetails',
+			name: 'goodsDetails',
+			component: goodsDetails
+		},
+		{
+			path: '/pay',
+			name: 'pay',
+			component: pay
+		},
+		{
+			path: '/paySuccess',
+			name: 'paySuccess',
+			component: paySuccess
+		}
   ]
 
 })
