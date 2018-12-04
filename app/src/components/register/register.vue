@@ -76,6 +76,7 @@ export default {
         })
         .then(data => {
           if (data.code == 1) {
+            // 获取成功了   这里有问题===
             return;
           } else {
             // 获取验证码失败，请稍后再试
@@ -124,7 +125,7 @@ export default {
       }
       axios
         .get("/bmys/check/checkcode", {
-          params: {
+          params:{
             code: this.verification,
             mobile: this.phone
           }
@@ -138,12 +139,12 @@ export default {
             console.log("1");
             axios
               .get("/bmys/user/reg", {
-                params: {
+                params:{
                   mobile: this.phone,
                   password: this.password,
                   repassword: this.rePassword
                 }
-              })
+              }) // 里面写登录的接口名
               .then(function(response) {
                 return response.data;
               })
@@ -168,20 +169,22 @@ export default {
           alert("网络异常，验证码获取失败");
           return;
         });
+      // ... 请求注册接口
+      // 请求代码
     }
   }
 };
 </script>
 <style scoped>
 .register {
-  margin-top: 0.4rem;
-  height: 100%;
-  overflow: hidden;
-  z-index: 100;
-  background: #ffffff;
-  position: absolute;
-  left: 0;
-  top: 0;
+    margin-top: .4rem;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 img {
   width: 2rem;

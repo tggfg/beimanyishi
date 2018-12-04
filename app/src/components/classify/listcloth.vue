@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper" ref="wrapper">
     <div class="cloth  content" >
-        <div v-for="(item,index) in pic" class="pic" @click="handleCloth(item.id)" :key="index">
+        <div v-for="(item,index) in pic" class="pic" @click="handleCloth(item.id)">
            <a href="##">
                <img :src="item.picture" alt="">
            </a>
@@ -27,7 +27,7 @@ export default {
         this.id2=this.$route.query.typeId_2;
         this.id3=this.$route.query.typeId_3;
         // console.log(this.$route.query.typeId_1);
-        this.handleRoute({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:1})
+        this.handleRoute({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:1})     
     },
     computed:{
         ...Vuex.mapState({
@@ -48,7 +48,7 @@ export default {
             pullUpLoad:true
         });
         this.scroll.on("pullingUp",()=>{
-
+            
         this.handlePic({id1:this.id1,id2:this.id2,id3:this.id3,pageNum:++this.pageNum})
         })
     },
@@ -77,7 +77,7 @@ export default {
 </script>
 
 <style scoped>
-.wrapper{
+.wrapper{ 
     position: absolute;
     z-index: 1000;
     top:2rem;
@@ -87,7 +87,7 @@ export default {
     overflow: hidden;
     background: #fff;
 }
-.cloth{
+.cloth{ 
     overflow: hidden;
 }
 .cloth>.pic{
