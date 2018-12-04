@@ -4,7 +4,7 @@
             <div class="paySuccess-header-back" @click="handleBack()">
                 <img src="static/img/fanhui@2x.png" alt="">
             </div>
-            <h2 class="paySuccess-header-title">确认订单</h2>
+            <h2 class="paySuccess-header-title">付款成功</h2>
             <div></div>
         </div>
         <div class="paySuccess-center">
