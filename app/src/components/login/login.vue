@@ -56,7 +56,7 @@ export default {
             })
             .then((response) => {
                 if (response.data.code === 1002) { // 假设后端给了登录成功的信息
-                    this.$router.push('/home') // 跳转到home页
+                    this.$router.push('/home/index') // 跳转到home页
                 }else{
                     alert("账号密码错误")
                 }
