@@ -7,26 +7,10 @@
         </div>
         <div class="order-bot">
             <ul>
-                <li>
-                    <img src="static/img/qianbao@2x.png" >
-                    <p>待付款</p>
-                </li>
-                <li>
-                    <img src="static/img/fahuo@2x.png" >
-                    <p>待发货</p>
-                </li>
-                <li>
-                    <img src="static/img/yunshu@2x.png" >
-                    <p>待收货</p>
-                </li>
-                <li>
-                    <img src="static/img/pinglun@2x.png" >
-                    <p>待评价</p>
-                </li>
-                <li>
-                    <img src="static/img/tuikuan@2x.png" >
-                    <p>退款/退货</p>
-                </li>
+                <router-link v-for="list in orderLists" :key="list.type" tag = "li" :to="list.path">
+                    <img :src="list.img">
+                    <p>{{list.title}}</p>
+                </router-link>
             </ul>
         </div>
     </div>
@@ -34,7 +18,17 @@
 
 <script>
 export default {
-    
+    data(){
+        return {
+            orderLists:[
+                {type:1,title:"待付款",img:"static/img/qianbao@2x.png",path:"./myorder/orderPayment"},
+                {type:2,title:"待发货",img:"static/img/fahuo@2x.png",path:"./myorder/orderDeliver"},
+                {type:3,title:"待收货",img:"static/img/yunshu@2x.png",path:"./myorder/orderReceive"},
+                {type:4,title:"待评价",img:"static/img/pinglun@2x.png",path:"./myorder/orderEvalute"},
+                {type:5,title:"退款/退货",img:"static/img/tuikuan@2x.png",path:"./myorder/orderReturn"}
+            ]
+        }
+    }
 }
 </script>
 

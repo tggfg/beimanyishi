@@ -66,12 +66,13 @@ export default {
 
       // 请求代码
       axios
-        .get("/bmys/sign/sendcode", {
+        .get("http://www.bmyss.xyz:8080/bmys/sign/sendcode", {
           params: {
             mobile: this.phone
           }
         }) // 里面写登录的接口名
         .then(function(response) {
+          console.log(response);
           return response.data;
         })
         .then(data => {
@@ -124,7 +125,7 @@ export default {
         return;
       }
       axios
-        .get("/bmys/check/checkcode", {
+        .get("http://www.bmyss.xyz:8080/bmys/check/checkcode", {
           params:{
             code: this.verification,
             mobile: this.phone
@@ -138,7 +139,7 @@ export default {
           if (data.code == 1004) {
             console.log("1");
             axios
-              .get("/bmys/user/reg", {
+              .get("http://www.bmyss.xyz:8080/bmys/user/reg", {
                 params:{
                   mobile: this.phone,
                   password: this.password,

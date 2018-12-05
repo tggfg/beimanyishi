@@ -30,6 +30,7 @@ import tehui3 from "../components/home/tehui/tehui3.vue"
 import search from "../components/home/search.vue";
 import message from "../components/home/message.vue";
 import find from "../components/home/Find.vue";
+<<<<<<< HEAD
 
 // jinqh
 import cart  from "../components/shopping/cart/cart.vue"
@@ -38,6 +39,14 @@ import goodsDetails from '@/components/shopping/goodsDetails/goodsDetails.vue'
 import pay from '@/components/shopping/pay/pay.vue'
 import paySuccess from '@/components/shopping/pay/paySuccess.vue';
 
+=======
+//订单路由
+import orderPayment from "../components/personal/myorder/orderPayment.vue";
+import orderDeliver from "../components/personal/myorder/orderDeliver.vue";
+import orderEvalute from "../components/personal/myorder/orderEvalute.vue";
+import orderReceive from "../components/personal/myorder/orderReceive.vue";
+import orderReturn from "../components/personal/myorder/orderReturn.vue";
+>>>>>>> order
 Vue.use(Router)
 
 export default new Router({
@@ -180,6 +189,31 @@ export default new Router({
 	 name:"personal",
 	 component:personal
    },
+   {
+	path: "/myorder/orderPayment",
+	name: "orderPayment",
+	component: orderPayment,
+  },
+  {
+	path: "/myorder/orderEvalute",
+	name: "orderEvalute",
+	component: orderEvalute,
+  },
+  {
+	path: "/myorder/orderReceive",
+	name: "orderReceive",
+	component: orderReceive,
+  },
+  {
+	path: "/myorder/orderDeliver",
+	name: "orderDeliver",
+	component: orderDeliver,
+  },
+  {
+	path: "/myorder/orderReturn",
+	name: "orderReturn",
+	component: orderReturn,
+  },
    {
 		path:"/search",
 		name:"search",
