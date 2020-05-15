@@ -4,10 +4,10 @@
             <div class="goodsAdd-content-color">
                 <div class="goodsAdd-content-color-top">
                     <div class="goodsAdd-content-img">
-                        <img :src="goodsAdd.goodsMinSrc" alt="">
+                        <img :src="goods.picture" alt="">
                     </div>
                     <div class="goodsAdd-content-color-price">
-                        <p>￥{{goodsAdd.goodsPrice}}</p>
+                        <p>￥{{goods.price}}</p>
                         <p>已选择：{{color}}-{{size}}</p>
                     </div>
                     <div class="goodsAdd-content-cancel" @click="handleCancel()">
@@ -17,8 +17,8 @@
                 <div class="goodsAdd-content-color-select">
                     <p>颜色</p>
                     <p>
-                        <span 
-                            v-for="(item, index) in goodsAdd.goodsColor" 
+                        <span
+                            v-for="(item, index) in goodsAdd.goodsColor"
                             :style="{background: item.color, backgroundClip: 'content-box'}"
                             :class="activeIndex == index ? 'active' : ''"
                             @click="handleActiveIndex(item, index)"
@@ -30,8 +30,8 @@
             <div class="goodsAdd-content-size">
                 <p>尺码</p>
                 <p>
-                    <span 
-                    v-for="(item, index) in goodsAdd.goodsSize" 
+                    <span
+                    v-for="(item, index) in goodsAdd.goodsSize"
                     :class="onIndex == index ? 'on' : ''"
                     @click="handleOnIndex(item, index)"
                     :key="index"
@@ -68,7 +68,7 @@ export default {
     },
     computed: {
         ...Vuex.mapState({
-            // goods: state => state.goodsDetails.goods,
+            goods: state => state.goodsDetails.goods,
             goodsAdd: state => state.goodsDetails.goodsAdd
         })
     },
@@ -102,9 +102,9 @@ export default {
                 obj[this.goodsAdd.id].num += this.num;
             } else {
                 obj[this.goodsAdd.id] = {
-                    "src": this.goodsAdd.goodsMinSrc,
-                    "name": this.goodsAdd.goodsName,
-                    "price": this.goodsAdd.goodsPrice,
+                    "src": this.goods.picture,
+                    "name": this.goods.name,
+                    "price": this.goods.price,
                     "color": this.color,
                     "size": this.size,
                     "num": this.num
@@ -126,7 +126,7 @@ export default {
             //     };
             //     this.handleAddProduct(product);
             // } else {
-                
+
             // }
             this.$emit('mask', false);
             this.$emit('prompt', true);

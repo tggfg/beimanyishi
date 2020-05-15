@@ -1,7 +1,9 @@
 <template>
     <div class="order">
         <div class="header">
-            <img src="static/img/fanhui@2x.png" alt="">
+
+            <img src="static/img/fanhui@2x.png" alt="" @click="handleBack()">
+
             我的订单
         </div>
         <div class="section">
@@ -46,6 +48,9 @@ export default {
               case 5:
                 this.$router.push("./orderReturn");
           }
+      },
+      handleBack(){
+        this.$router.push({name:"personal"});
       }
   }
 };
@@ -86,7 +91,7 @@ export default {
 .section figure {
   height: 0.76rem;
   margin: 0;
- 
+
 }
 .section figure figcaption {
   display: flex;

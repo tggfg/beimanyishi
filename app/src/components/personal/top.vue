@@ -3,17 +3,32 @@
         <div class="title_top"></div>
         <div class="title_com">
              <router-link to="login">
-            <p>登录/注册</p>
+            <p>{{name?name:"登录/注册"}}</p>
+            <p @click="handleLoginOut()">{{name?"退出":""}}</p>
              </router-link>
-            <img src="/static/img/赵老师.jpg" >
+            <img src="static/img/goodsAdd_05.jpg" />
         </div>
     </div>
 </template>
 
 <script>
-
+import Vuex from "Vuex";
 export default {
 
+   computed:{
+        ...Vuex.mapState({
+            name:state=>state.login.name
+        })
+    },
+     methods: {
+       ...Vuex.mapMutations({
+         handleT:"login/handleT"
+      }),
+      handleLoginOut(){
+        this.handleT();
+        this.$router.push("/personal")
+      }
+}
 }
 </script>
 

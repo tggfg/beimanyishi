@@ -1,27 +1,29 @@
 import axios from "axios";
 export default {
-   handleBanner({commit}){
-   	axios({
-   		methods:"get",
-   		// https://m.maizuo.com/v4/api/billboard/home?__t=1541905558870
-   		 url:"http://localhost:3000/list1",
+  handleBanner({commit}){
+    axios({
+      methods:"get",
+      // https://m.maizuo.com/v4/api/billboard/home?__t=1541905558870
+       url:"../../bmys/static/json/list.json",
 
-   	}).then((data)=>{
-   		commit("handleBanner",data.data);
-   	})
+    }).then((data)=>{
+         console.log(data.data.list1);
+       commit("handleBanner",data.data.list1);
+    })
 
-   },
-   handleCloth({commit},params){
-	if(params<5){
-		console.log(params)
-			axios({
-							method:"get",
-					url:"http://localhost:3000/yifu?_page="+params+"&_limit=2",
-							// url:"http://localhost:8080/static/json/list.json?_page="+params+&_limit="4",
-							}).then((data)=>{
-							commit("handleCloth",data.data)
-							})
-			}
+  },
+  handleCloth({commit},params){
+ if(params<2){
+   console.log(params)
+     axios({
+             method:"get",
+         url:"../../bmys/static/json/list.json",
+             }).then((data)=>{
+             console.log(data.data.yifu)
+              commit("handleCloth",data.data.yifu)
+             })
+     }
+
    },
    handleTehui({commit,state},params){
     console.log(params);

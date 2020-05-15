@@ -6,6 +6,7 @@ import home from "./home";
 import clothesin from './clothes'
 import goodsDetails from './goodsDetails';
 import cart from './cart';
+import login from './login';
 
 Vue.use(Vuex);
 const state = {
@@ -35,7 +36,8 @@ const store =  new Vuex.Store({
         home,
         clothesin,
         goodsDetails,
-        cart
+        cart,
+        login,
 	}
 })
 

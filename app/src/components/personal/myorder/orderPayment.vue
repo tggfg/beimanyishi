@@ -6,15 +6,15 @@
         <div class="top">
           <p class="top_left">
             <span>
-              <img src="static/img/beijing4@2x.png" alt>
+              <img src="static/img/beijing4@2x.png" />
             </span>
             <strong>贝曼衣舍旗舰店</strong>
-            <i><img src="static/img/gengduo@2x.png" alt=""></i>
+            <i><img src="static/img/gengduo@2x.png" alt=""/></i>
           </p>
           <p class="top_right">等待买家付款</p>
         </div>
         <div class="center">
-          <img class="center_img">
+          <img class="center_img"  src="static/img/goodsAdd_05.jpg"/>
           <div class="center_right">
             <p>贝曼衣舍冬季韩版复古宽松
               <span>￥428.00</span>
@@ -52,7 +52,7 @@ export default {
           axios({
               methods:"get",
               url:"http://www.bmyss.xyz:8080/bmys/order/getOrderList",
-              
+
           }).then((res)=>{
                console.log(res);
             //    this.films = res.data.data.films
@@ -125,7 +125,7 @@ li .top {
     width:2rem;
     height:2.16rem;
     border:none;
-    
+
 }
 .center_right{
     margin-top:.12rem;

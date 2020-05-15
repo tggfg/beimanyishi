@@ -2,52 +2,73 @@
 	"yifu": [
 					
 			{
-						"src": "../../../../static/img/images/限时特惠@2x_13.png",
-						"id": 1,
-						"name": "针织衫",
-						"price": 89
-			},
-		      {
-					"src": "../../../../static/img/images/限时特惠@2x_13.png",
+					"src": "https://s1.lativ.com.tw/m/i/37644/37644_M_61.jpg",
 					"id": 1,
 					"name": "针织衫",
 					"price": 89
 			},
-			{
-					"src": "../../../../static/img/images/限时特惠@2x_13.png",
-					"id": 1,
+					{
+					"src": "https://s2.lativ.com.tw/m/i/37372/37372_D_21_v.jpg",
+					"id": 2,
 					"name": "针织衫",
 					"price": 89
-		     },
+			},
 			{
-				"src": "../../../../static/img/images/限时特惠@2x_13.png",
-				"id": 1,
+					"src": "https://s4.lativ.com.tw/m/i/37843/37843_M_65.jpg",
+					"id": 3,
+					"name": "针织衫",
+					"price": 89
+				},
+			{
+				"src": "https://s2.lativ.com.tw/m/i/37705/37705_M_06.jpg",
+				"id": 4,
 				"name": "针织衫",
 				"price": 89
 			},	
 			{
-						"src": "../../../../static/img/images/限时特惠@2x_13.png",
-						"id": 1,
-						"name": "针织衫",
-						"price": 89
+				"src": "https://s4.lativ.com.tw/m/i/37562/37562_M_64.jpg",
+			
+				"id": 5,
+				"name": "针织衫",
+				"price": 89
 			},
-		      {
-					"src": "../../../../static/img/images/限时特惠@2x_13.png",
-					"id": 1,
-					"name": "针织衫",
-					"price": 89
+					{
+				"src": "https://s1.lativ.com.tw/m/i/37311/37311_D_23_v.jpg",
+				"id": 6,
+				"name": "针织衫",
+				"price": 89
 			},
 			{
-					"src": "../../../../static/img/images/限时特惠@2x_13.png",
-					"id": 1,
-					"name": "针织衫",
-					"price": 89
-		     },
+				"src": "https://s4.lativ.com.tw/m/i/37319/37319_M_64.jpg",
+				"id": 7,
+				"name": "针织衫",
+				"price": 89
+				},
 			{
-				"src": "../../../../static/img/images/限时特惠@2x_13.png",
-				"id": 1,
+				"src": "https://s4.lativ.com.tw/m/i/38183/38183_D_23_v.jpg",
+				"id": 8,
 				"name": "针织衫",
 				"price": 89
 			}
-		]			
+	],
+	"list1":[
+		{	
+		"src":"https://s3.lativ.com.tw/m/i/ProductShow/37549_event_1180X557m_181114_TW.jpg",
+		"id":1	
+		},
+		{	
+		"src":"https://s2.lativ.com.tw/m/i/ProductShow/37457_1P680_1180X557m_181114_TW.jpg",
+		"id":2	
+	},
+		{	
+		"src":"https://s4.lativ.com.tw/m/i/ProductShow/38244_38163_37625_38245_SWEATS_1180X557_181015_TW_0.jpg",
+		"id":3	
+	},
+		{	
+		"src":"https://s1.lativ.com.tw/m/i/ProductShow/MICKEY-BD_1180X557_181108_TW_0.jpg",
+		"id":4	
+	  }
+ ]
+	
+	
 }

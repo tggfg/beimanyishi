@@ -24,7 +24,6 @@
       <img src="static/img/穿搭@2x_22.gif">
     </div>
 </router-link>
-
 	</div>
 </template>
 
@@ -41,6 +40,12 @@ export default({
 
 
 <style>
+.clothes{
+ width:100%;
+  height:100%;
+  position: fixed;
+  overflow:scroll;
+}
 .tou{
     height:0.4rem;
     width: 100%;

@@ -18,7 +18,7 @@
 </template>
 <script>
 import axios from 'axios'
-
+import Vuex from "vuex";
 export default {
     data() {
         return {
@@ -26,7 +26,13 @@ export default {
             password: ''
         }
     },
+
+
+
     methods: {
+       ...Vuex.mapMutations({
+         handleName:"login/handleName"
+      }),
         loginHandle: function() { // 点击登录按钮
              if (this.phone === '') {
                 alert('手机号为必填项')
@@ -35,17 +41,17 @@ export default {
                 var reg = /^1[3456789]\d{9}$/;
                 if(!reg.test(this.phone)){
                     alert("请输入正确的手机号");
-                    return  
+                    return
                 }
             }
             if (this.password === '') {
-                alert('密码为必填项')  
+                alert('密码为必填项')
                 return
             }else{
                 var pasw = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
                 if(!pasw.test(this.password)){
                     alert("请输入6-16位字母数字组合的密码");
-                    return  
+                    return
                 }
             }
             axios.get('http://www.bmyss.xyz:8080//bmys/user/login', {
@@ -57,6 +63,7 @@ export default {
             .then((response) => {
                 if (response.data.code === 1002) { // 假设后端给了登录成功的信息
                 console.log(response);
+                this.handleName(this.phone);
                     this.$router.push('/home/index') // 跳转到home页
                 }else{
                     alert("账号密码错误")

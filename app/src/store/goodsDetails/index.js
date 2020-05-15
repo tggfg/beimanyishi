@@ -45,14 +45,14 @@ const actions = {
     handleGoodsAdd({commit}) {
         axios({
             method: 'get',
-            url: 'http://localhost:3000/goods?id=1'
+            url: '/bmys/goods/getGoodsColorAndSize'
         }).then((res) => {
-            commit('handleGoodsAdd', res.data[0]);
+            commit('handleGoodsAdd', res.data.data);
             // console.log(res);
         })
     },
     handleAddProduct({commit}, params) {
-        
+
         // axios({
         //     method: 'get',
         //     url: 'http://localhost:3000/products?uid=1&gid=' + params.gid
@@ -90,7 +90,7 @@ const actions = {
         //             console.log(res);
         //         })
         //     }
-            
+
         // })
     }
 }

@@ -276,7 +276,7 @@
 	padding:0 13px;
 	font-size:16px;
     }
-   .fuzhuang ul li{
+   .fuzhuang>li{
 	width:50%;
    }
 	.fuzhuang img{

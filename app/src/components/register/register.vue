@@ -76,8 +76,7 @@ export default {
           return response.data;
         })
         .then(data => {
-          if (data.code == 1) {
-            // 获取成功了   这里有问题===
+          if (data.code == 1011) {
             return;
           } else {
             // 获取验证码失败，请稍后再试

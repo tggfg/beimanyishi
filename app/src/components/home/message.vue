@@ -1,7 +1,7 @@
 <template>
 <div class="msg">
     <div class="head">
-        <router-link :to="{name:'home'}"> 
+        <router-link :to="{name:'home'}">
                <img src="../../../static/icon/left.png"/>
         </router-link>
        <p>消息中心</p>
@@ -124,7 +124,7 @@ export default {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 16px;
     color:#5a5a5a;
 }
 .msg>.cont>dl>.right{

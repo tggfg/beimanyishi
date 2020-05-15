@@ -35,7 +35,7 @@
                 <p>加入购物车成功</p>
             </div>
         </transition>
-        
+
     </div>
 </template>
 
@@ -81,7 +81,7 @@ export default {
             this.$router.back();
         },
         handleHome() {
-            this.$router.push('/home');
+            this.$router.push('/home/index');
         },
         handleCart() {
             this.$router.push('/emptyCart');
